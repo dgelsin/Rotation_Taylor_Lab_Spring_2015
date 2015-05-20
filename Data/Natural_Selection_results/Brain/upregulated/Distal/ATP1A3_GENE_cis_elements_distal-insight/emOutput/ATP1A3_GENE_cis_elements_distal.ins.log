@@ -1,0 +1,116 @@
+thres-15-beta	Commandline: ./INSIGHT-EM/bin/INSIGHT-EM-v1.2-beta -v -i 100000 -b emOutput/ATP1A3_GENE_cis_elements_distal.emInput.flankPoly.forBetas.ins.f15
+thres-15-beta	----------------------------------------------------------------------------------------------
+thres-15-beta	       INSIGHT-EM v1.2-beta, May 2014 
+thres-15-beta	----------------------------------------------------------------------------------------------
+thres-15-beta	==> Estimating the ratio beta1/(beta1+beta3) using neutral sites with low MAF.
+thres-15-beta	----------------------------------------------------------------------------------------------
+thres-15-beta	==> Processing site data file 'emOutput/ATP1A3_GENE_cis_elements_distal.emInput.flankPoly.forBetas.ins.f15' and lambda parameters
+thres-15-beta	==> Performing EM on ratio beta1/(beta1+beta3) [ initial value = 0.5 ]
+thres-15-beta	    - EM stops after 100000 iterations or when log-likelihood increase is below 1e-06
+thres-15-beta	    - '.' = 100 iterations
+thres-15-beta	----------------------------------------------------------------------------------------------
+thres-15-beta	Progress: 
+thres-15-beta	Done. Running time  0m00s.
+thres-15-beta	
+thres-15-beta	----------------------------------------------------------
+thres-15-beta	           beta1 
+thres-15-beta	Estimates: 0.857824 
+thres-15-beta	----------------------------------------------------------------------------------------------
+thres-15-beta	             iter     lnLd       diff       status
+thres-15-beta	EM status:       7   -43.7475 2.95739e-08  converged
+thres-15-beta	----------------------------------------------------------------------------------------------
+thres-15-beta	Beta Line: beta 0.7055 0.17757 0.11693
+thres-15-main	Commandline: ./INSIGHT-EM/bin/INSIGHT-EM-v1.2-beta -v -i 1000000 -p emOutput/ATP1A3_GENE_cis_elements_distal.post.sites emOutput/ATP1A3_GENE_cis_elements_distal.emInput.ins.f15
+thres-15-main	----------------------------------------------------------------------------------------------
+thres-15-main	       INSIGHT-EM v1.2-beta, May 2014 
+thres-15-main	----------------------------------------------------------------------------------------------
+thres-15-main	==> Processing site data file 'emOutput/ATP1A3_GENE_cis_elements_distal.emInput.ins.f15' and extracting neutral model parameters
+thres-15-main	==> Data file consists of 8723 sites in 52 genomic blocks.
+thres-15-main	==> Performing EM on selection parameters
+thres-15-main	    - EM stops after 1000000 iterations or when log-likelihood increase is below 1e-06
+thres-15-main	    - '.' = 100 iterations
+thres-15-main	    - estimating the following parameters: rho (init = 0.600000) eta (init = 1.000000) gamma (init = 0.500000).
+thres-15-main	    - using complete version of the model integrating over assignments to the ancestral states Zi.
+thres-15-main	----------------------------------------------------------------------------------------------
+thres-15-main	Progress: .......
+thres-15-main	Done. Running time  0m00s.
+thres-15-main	----------------------------------------------------------------------------------------------
+thres-15-main	==> Posterior counts output to file emOutput/ATP1A3_GENE_cis_elements_distal.post.sites.
+thres-15-main	----------------------------------------------------------------------------------------------
+thres-15-main	             rho      eta    gamma       Dp       Pw    alpha      tau
+thres-15-main	Estimates: 0.593809 0.000000 0.927330 0.000000 1.346362 0.000000 0.575491
+thres-15-main	StndrdErr: 0.211180 0.425158 0.342165 0.676050 0.612258 0.621537 0.213893
+thres-15-main	Posterior: 0.593804 -------- -------- 0.000000 1.346012 0.000000 0.559108
+thres-15-main	----------------------------------------------------------------------------------------------
+thres-15-main	             iter     lnLd       diff       status
+thres-15-main	EM status:     723   -811.314 9.97668e-07  converged
+thres-15-main	----------------------------------------------------------------------------------------------
+thres-15-rho0	Commandline: ./INSIGHT-EM/bin/INSIGHT-EM-v1.2-beta -v -i 1000000 -fr -r 0.0 emOutput/ATP1A3_GENE_cis_elements_distal.emInput.ins.f15
+thres-15-rho0	----------------------------------------------------------------------------------------------
+thres-15-rho0	       INSIGHT-EM v1.2-beta, May 2014 
+thres-15-rho0	----------------------------------------------------------------------------------------------
+thres-15-rho0	==> Processing site data file 'emOutput/ATP1A3_GENE_cis_elements_distal.emInput.ins.f15' and extracting neutral model parameters
+thres-15-rho0	==> Data file consists of 8723 sites in 52 genomic blocks.
+thres-15-rho0	==> Performing EM on selection parameters
+thres-15-rho0	    - EM stops after 1000000 iterations or when log-likelihood increase is below 1e-06
+thres-15-rho0	    - '.' = 100 iterations
+thres-15-rho0	    - fixing the following parameters: rho = 0.000000.
+thres-15-rho0	    - estimating the following parameters: eta (init = 1.000000) gamma (init = 0.500000).
+thres-15-rho0	    - using complete version of the model integrating over assignments to the ancestral states Zi.
+thres-15-rho0	----------------------------------------------------------------------------------------------
+thres-15-rho0	Progress: 
+thres-15-rho0	Done. Running time  0m00s.
+thres-15-rho0	----------------------------------------------------------------------------------------------
+thres-15-rho0	             rho      eta    gamma       Dp       Pw    alpha      tau
+thres-15-rho0	Estimates: 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000
+thres-15-rho0	StndrdErr: 0.000000    -nan    -nan    -nan    -nan -1.000000 -1.000000
+thres-15-rho0	----------------------------------------------------------------------------------------------
+thres-15-rho0	             iter     lnLd       diff       status
+thres-15-rho0	EM status:       2    -817.17       0  converged
+thres-15-rho0	----------------------------------------------------------------------------------------------
+thres-15-eta0	Commandline: ./INSIGHT-EM/bin/INSIGHT-EM-v1.2-beta -v -i 1000000 -fe -e 0.0 emOutput/ATP1A3_GENE_cis_elements_distal.emInput.ins.f15
+thres-15-eta0	----------------------------------------------------------------------------------------------
+thres-15-eta0	       INSIGHT-EM v1.2-beta, May 2014 
+thres-15-eta0	----------------------------------------------------------------------------------------------
+thres-15-eta0	==> Processing site data file 'emOutput/ATP1A3_GENE_cis_elements_distal.emInput.ins.f15' and extracting neutral model parameters
+thres-15-eta0	==> Data file consists of 8723 sites in 52 genomic blocks.
+thres-15-eta0	==> Performing EM on selection parameters
+thres-15-eta0	    - EM stops after 1000000 iterations or when log-likelihood increase is below 1e-06
+thres-15-eta0	    - '.' = 100 iterations
+thres-15-eta0	    - fixing the following parameters: eta = 0.000000.
+thres-15-eta0	    - estimating the following parameters: rho (init = 0.600000) gamma (init = 0.500000).
+thres-15-eta0	    - using complete version of the model integrating over assignments to the ancestral states Zi.
+thres-15-eta0	----------------------------------------------------------------------------------------------
+thres-15-eta0	Progress: ......
+thres-15-eta0	Done. Running time  0m00s.
+thres-15-eta0	----------------------------------------------------------------------------------------------
+thres-15-eta0	             rho      eta    gamma       Dp       Pw    alpha      tau
+thres-15-eta0	Estimates: 0.593812 0.000000 0.927329 0.000000 1.346367 0.000000 0.575494
+thres-15-eta0	StndrdErr: 0.129181 0.000000 0.337392    -nan 0.536764 -1.000000 0.148223
+thres-15-eta0	----------------------------------------------------------------------------------------------
+thres-15-eta0	             iter     lnLd       diff       status
+thres-15-eta0	EM status:     650   -811.314 9.9953e-07  converged
+thres-15-eta0	----------------------------------------------------------------------------------------------
+thres-15-gam0	Commandline: ./INSIGHT-EM/bin/INSIGHT-EM-v1.2-beta -v -i 1000000 -fg -g 0.0 emOutput/ATP1A3_GENE_cis_elements_distal.emInput.ins.f15
+thres-15-gam0	----------------------------------------------------------------------------------------------
+thres-15-gam0	       INSIGHT-EM v1.2-beta, May 2014 
+thres-15-gam0	----------------------------------------------------------------------------------------------
+thres-15-gam0	==> Processing site data file 'emOutput/ATP1A3_GENE_cis_elements_distal.emInput.ins.f15' and extracting neutral model parameters
+thres-15-gam0	==> Data file consists of 8723 sites in 52 genomic blocks.
+thres-15-gam0	==> Performing EM on selection parameters
+thres-15-gam0	    - EM stops after 1000000 iterations or when log-likelihood increase is below 1e-06
+thres-15-gam0	    - '.' = 100 iterations
+thres-15-gam0	    - fixing the following parameters: gamma = 0.000000.
+thres-15-gam0	    - estimating the following parameters: rho (init = 0.600000) eta (init = 1.000000).
+thres-15-gam0	    - using complete version of the model integrating over assignments to the ancestral states Zi.
+thres-15-gam0	----------------------------------------------------------------------------------------------
+thres-15-gam0	Progress: .......... .......... ......
+thres-15-gam0	Done. Running time  0m00s.
+thres-15-gam0	----------------------------------------------------------------------------------------------
+thres-15-gam0	             rho      eta    gamma       Dp       Pw    alpha      tau
+thres-15-gam0	Estimates: 0.303842 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000
+thres-15-gam0	StndrdErr: 0.143170 0.913395 0.000000 0.743169    -nan 0.398656 -1.000000
+thres-15-gam0	----------------------------------------------------------------------------------------------
+thres-15-gam0	             iter     lnLd       diff       status
+thres-15-gam0	EM status:    2688   -815.089 9.99377e-07  converged
+thres-15-gam0	----------------------------------------------------------------------------------------------

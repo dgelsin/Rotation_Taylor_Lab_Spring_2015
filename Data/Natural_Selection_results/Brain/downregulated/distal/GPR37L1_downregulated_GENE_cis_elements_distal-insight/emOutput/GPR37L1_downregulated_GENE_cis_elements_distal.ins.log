@@ -1,0 +1,121 @@
+thres-15-beta	Commandline: ./INSIGHT-EM/bin/INSIGHT-EM-v1.2-beta -v -i 100000 -b emOutput/GPR37L1_downregulated_GENE_cis_elements_distal.emInput.flankPoly.forBetas.ins.f15
+thres-15-beta	----------------------------------------------------------------------------------------------
+thres-15-beta	       INSIGHT-EM v1.2-beta, May 2014 
+thres-15-beta	----------------------------------------------------------------------------------------------
+thres-15-beta	==> Estimating the ratio beta1/(beta1+beta3) using neutral sites with low MAF.
+thres-15-beta	----------------------------------------------------------------------------------------------
+thres-15-beta	==> Processing site data file 'emOutput/GPR37L1_downregulated_GENE_cis_elements_distal.emInput.flankPoly.forBetas.ins.f15' and lambda parameters
+thres-15-beta	==> Performing EM on ratio beta1/(beta1+beta3) [ initial value = 0.5 ]
+thres-15-beta	    - EM stops after 100000 iterations or when log-likelihood increase is below 1e-06
+thres-15-beta	    - '.' = 100 iterations
+thres-15-beta	----------------------------------------------------------------------------------------------
+thres-15-beta	Progress: 
+thres-15-beta	Done. Running time  0m00s.
+thres-15-beta	
+thres-15-beta	----------------------------------------------------------
+thres-15-beta	           beta1 
+thres-15-beta	Estimates: 0.962853 
+thres-15-beta	----------------------------------------------------------------------------------------------
+thres-15-beta	             iter     lnLd       diff       status
+thres-15-beta	EM status:       7   -33.3017 8.47449e-08  converged
+thres-15-beta	----------------------------------------------------------------------------------------------
+thres-15-beta	Beta Line: beta 0.777459 0.192547 0.0299945
+thres-15-main	Commandline: ./INSIGHT-EM/bin/INSIGHT-EM-v1.2-beta -v -i 1000000 -p emOutput/GPR37L1_downregulated_GENE_cis_elements_distal.post.sites emOutput/GPR37L1_downregulated_GENE_cis_elements_distal.emInput.ins.f15
+thres-15-main	----------------------------------------------------------------------------------------------
+thres-15-main	       INSIGHT-EM v1.2-beta, May 2014 
+thres-15-main	----------------------------------------------------------------------------------------------
+thres-15-main	==> Processing site data file 'emOutput/GPR37L1_downregulated_GENE_cis_elements_distal.emInput.ins.f15' and extracting neutral model parameters
+thres-15-main	==> Data file consists of 3311 sites in 23 genomic blocks.
+thres-15-main	==> Performing EM on selection parameters
+thres-15-main	    - EM stops after 1000000 iterations or when log-likelihood increase is below 1e-06
+thres-15-main	    - '.' = 100 iterations
+thres-15-main	    - estimating the following parameters: rho (init = 0.600000) eta (init = 1.000000) gamma (init = 0.500000).
+thres-15-main	    - using complete version of the model integrating over assignments to the ancestral states Zi.
+thres-15-main	----------------------------------------------------------------------------------------------
+thres-15-main	Progress: .......... .......... .......... .......... .......... .......... .......... .......... ...
+thres-15-main	Done. Running time  0m00s.
+thres-15-main	----------------------------------------------------------------------------------------------
+thres-15-main	==> Posterior counts output to file emOutput/GPR37L1_downregulated_GENE_cis_elements_distal.post.sites.
+thres-15-main	----------------------------------------------------------------------------------------------
+thres-15-main	             rho      eta    gamma       Dp       Pw    alpha      tau
+thres-15-main	Estimates: 0.253472 0.004519 3.139227 0.003186 2.783994 0.001532 0.515943
+thres-15-main	StndrdErr: 0.504500 2.292613 4.860520 1.621330 1.837306 0.779496 0.313776
+thres-15-main	Posterior: 0.253464 -------- -------- 0.003171 2.784745 0.001538 0.512238
+thres-15-main	----------------------------------------------------------------------------------------------
+thres-15-main	             iter     lnLd       diff       status
+thres-15-main	EM status:    8315   -451.494 9.994e-07  converged
+thres-15-main	----------------------------------------------------------------------------------------------
+thres-15-rho0	Commandline: ./INSIGHT-EM/bin/INSIGHT-EM-v1.2-beta -v -i 1000000 -fr -r 0.0 emOutput/GPR37L1_downregulated_GENE_cis_elements_distal.emInput.ins.f15
+thres-15-rho0	----------------------------------------------------------------------------------------------
+thres-15-rho0	       INSIGHT-EM v1.2-beta, May 2014 
+thres-15-rho0	----------------------------------------------------------------------------------------------
+thres-15-rho0	==> Processing site data file 'emOutput/GPR37L1_downregulated_GENE_cis_elements_distal.emInput.ins.f15' and extracting neutral model parameters
+thres-15-rho0	==> Data file consists of 3311 sites in 23 genomic blocks.
+thres-15-rho0	==> Performing EM on selection parameters
+thres-15-rho0	    - EM stops after 1000000 iterations or when log-likelihood increase is below 1e-06
+thres-15-rho0	    - '.' = 100 iterations
+thres-15-rho0	    - fixing the following parameters: rho = 0.000000.
+thres-15-rho0	    - estimating the following parameters: eta (init = 1.000000) gamma (init = 0.500000).
+thres-15-rho0	    - using complete version of the model integrating over assignments to the ancestral states Zi.
+thres-15-rho0	----------------------------------------------------------------------------------------------
+thres-15-rho0	Progress: 
+thres-15-rho0	Done. Running time  0m00s.
+thres-15-rho0	----------------------------------------------------------------------------------------------
+thres-15-rho0	             rho      eta    gamma       Dp       Pw    alpha      tau
+thres-15-rho0	Estimates: 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000
+thres-15-rho0	StndrdErr: 0.000000    -nan    -nan    -nan    -nan -1.000000 -1.000000
+thres-15-rho0	----------------------------------------------------------------------------------------------
+thres-15-rho0	             iter     lnLd       diff       status
+thres-15-rho0	EM status:       2   -453.979       0  converged
+thres-15-rho0	----------------------------------------------------------------------------------------------
+thres-15-eta0	Commandline: ./INSIGHT-EM/bin/INSIGHT-EM-v1.2-beta -v -i 1000000 -fe -e 0.0 emOutput/GPR37L1_downregulated_GENE_cis_elements_distal.emInput.ins.f15
+thres-15-eta0	----------------------------------------------------------------------------------------------
+thres-15-eta0	       INSIGHT-EM v1.2-beta, May 2014 
+thres-15-eta0	----------------------------------------------------------------------------------------------
+thres-15-eta0	==> Processing site data file 'emOutput/GPR37L1_downregulated_GENE_cis_elements_distal.emInput.ins.f15' and extracting neutral model parameters
+thres-15-eta0	==> Data file consists of 3311 sites in 23 genomic blocks.
+thres-15-eta0	==> Performing EM on selection parameters
+thres-15-eta0	    - EM stops after 1000000 iterations or when log-likelihood increase is below 1e-06
+thres-15-eta0	    - '.' = 100 iterations
+thres-15-eta0	    - fixing the following parameters: eta = 0.000000.
+thres-15-eta0	    - estimating the following parameters: rho (init = 0.600000) gamma (init = 0.500000).
+thres-15-eta0	    - using complete version of the model integrating over assignments to the ancestral states Zi.
+thres-15-eta0	----------------------------------------------------------------------------------------------
+thres-15-eta0	Progress: .......... .......... .......... ......
+thres-15-eta0	Done. Running time  0m00s.
+thres-15-eta0	----------------------------------------------------------------------------------------------
+thres-15-eta0	             rho      eta    gamma       Dp       Pw    alpha      tau
+thres-15-eta0	Estimates: 0.253155 0.000000 3.142128 0.000000 2.783124 0.000000 0.515756
+thres-15-eta0	StndrdErr: 0.266550 0.000000 2.827146    -nan 1.411098 -1.000000 0.189047
+thres-15-eta0	----------------------------------------------------------------------------------------------
+thres-15-eta0	             iter     lnLd       diff       status
+thres-15-eta0	EM status:    3634   -451.494 9.98814e-07  converged
+thres-15-eta0	----------------------------------------------------------------------------------------------
+thres-15-gam0	Commandline: ./INSIGHT-EM/bin/INSIGHT-EM-v1.2-beta -v -i 1000000 -fg -g 0.0 emOutput/GPR37L1_downregulated_GENE_cis_elements_distal.emInput.ins.f15
+thres-15-gam0	----------------------------------------------------------------------------------------------
+thres-15-gam0	       INSIGHT-EM v1.2-beta, May 2014 
+thres-15-gam0	----------------------------------------------------------------------------------------------
+thres-15-gam0	==> Processing site data file 'emOutput/GPR37L1_downregulated_GENE_cis_elements_distal.emInput.ins.f15' and extracting neutral model parameters
+thres-15-gam0	==> Data file consists of 3311 sites in 23 genomic blocks.
+thres-15-gam0	==> Performing EM on selection parameters
+thres-15-gam0	    - EM stops after 1000000 iterations or when log-likelihood increase is below 1e-06
+thres-15-gam0	    - '.' = 100 iterations
+thres-15-gam0	    - fixing the following parameters: gamma = 0.000000.
+thres-15-gam0	    - estimating the following parameters: rho (init = 0.600000) eta (init = 1.000000).
+thres-15-gam0	    - using complete version of the model integrating over assignments to the ancestral states Zi.
+thres-15-gam0	----------------------------------------------------------------------------------------------
+thres-15-gam0	Progress: .......... .......... .......... .......... .......... .
+thres-15-gam0	Done. Running time  0m01s.
+thres-15-gam0	----------------------------------------------------------------------------------------------
+thres-15-gam0	             rho      eta    gamma       Dp       Pw    alpha      tau
+thres-15-gam0	Estimates: 0.000170 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000
+thres-15-gam0	*** Error:  when computing FIM-based confidence intervals:
+thres-15-gam0	     - entry [1,1] of variance-covariance matrix is negative.
+thres-15-gam0	  -0.000000 0.492976 0.000000
+thres-15-gam0	  0.492976 -5.851751 0.000000
+thres-15-gam0	  0.000000 0.000000 0.000000
+thres-15-gam0	StndrdErr: -1.000000 -1.000000 -1.000000 -1.000000 -1.000000 0.000000 0.000000
+thres-15-gam0	----------------------------------------------------------------------------------------------
+thres-15-gam0	             iter     lnLd       diff       status
+thres-15-gam0	EM status:    5182   -453.979 9.99976e-07  converged
+thres-15-gam0	----------------------------------------------------------------------------------------------

@@ -1,0 +1,126 @@
+thres-15-beta	Commandline: ./INSIGHT-EM/bin/INSIGHT-EM-v1.2-beta -v -i 100000 -b emOutput/RIMKLA_upregulated_GENE_cis_elements_distal.emInput.flankPoly.forBetas.ins.f15
+thres-15-beta	----------------------------------------------------------------------------------------------
+thres-15-beta	       INSIGHT-EM v1.2-beta, May 2014 
+thres-15-beta	----------------------------------------------------------------------------------------------
+thres-15-beta	==> Estimating the ratio beta1/(beta1+beta3) using neutral sites with low MAF.
+thres-15-beta	----------------------------------------------------------------------------------------------
+thres-15-beta	==> Processing site data file 'emOutput/RIMKLA_upregulated_GENE_cis_elements_distal.emInput.flankPoly.forBetas.ins.f15' and lambda parameters
+thres-15-beta	==> Performing EM on ratio beta1/(beta1+beta3) [ initial value = 0.5 ]
+thres-15-beta	    - EM stops after 100000 iterations or when log-likelihood increase is below 1e-06
+thres-15-beta	    - '.' = 100 iterations
+thres-15-beta	----------------------------------------------------------------------------------------------
+thres-15-beta	Progress: 
+thres-15-beta	Done. Running time  0m00s.
+thres-15-beta	
+thres-15-beta	----------------------------------------------------------
+thres-15-beta	           beta1 
+thres-15-beta	Estimates: 1.000000 
+thres-15-beta	----------------------------------------------------------------------------------------------
+thres-15-beta	             iter     lnLd       diff       status
+thres-15-beta	EM status:       5 -0.0398085 2.2146e-08  converged
+thres-15-beta	----------------------------------------------------------------------------------------------
+thres-15-beta	Beta Line: beta 0.857143 0.142857 0
+thres-15-main	Commandline: ./INSIGHT-EM/bin/INSIGHT-EM-v1.2-beta -v -i 1000000 -p emOutput/RIMKLA_upregulated_GENE_cis_elements_distal.post.sites emOutput/RIMKLA_upregulated_GENE_cis_elements_distal.emInput.ins.f15
+thres-15-main	----------------------------------------------------------------------------------------------
+thres-15-main	       INSIGHT-EM v1.2-beta, May 2014 
+thres-15-main	----------------------------------------------------------------------------------------------
+thres-15-main	==> Processing site data file 'emOutput/RIMKLA_upregulated_GENE_cis_elements_distal.emInput.ins.f15' and extracting neutral model parameters
+thres-15-main	==> Data file consists of 693 sites in 6 genomic blocks.
+thres-15-main	==> Performing EM on selection parameters
+thres-15-main	    - EM stops after 1000000 iterations or when log-likelihood increase is below 1e-06
+thres-15-main	    - '.' = 100 iterations
+thres-15-main	    - estimating the following parameters: rho (init = 0.600000) eta (init = 1.000000) gamma (init = 0.500000).
+thres-15-main	    - using complete version of the model integrating over assignments to the ancestral states Zi.
+thres-15-main	----------------------------------------------------------------------------------------------
+thres-15-main	Progress: .......... .......... .......... .......... .......... ......
+thres-15-main	Done. Running time  0m00s.
+thres-15-main	----------------------------------------------------------------------------------------------
+thres-15-main	==> Posterior counts output to file emOutput/RIMKLA_upregulated_GENE_cis_elements_distal.post.sites.
+thres-15-main	----------------------------------------------------------------------------------------------
+thres-15-main	             rho      eta    gamma       Dp       Pw    alpha      tau
+thres-15-main	Estimates: 0.006279 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000
+thres-15-main	StndrdErr: 0.000923 73.717252 118.160235 1.103189 2.305235 0.465828 0.746668
+thres-15-main	Posterior: 0.006276 -------- -------- 0.000000 0.000000 0.000000 0.000000
+thres-15-main	----------------------------------------------------------------------------------------------
+thres-15-main	             iter     lnLd       diff       status
+thres-15-main	EM status:    5685   -46.3875 9.9978e-07  converged
+thres-15-main	----------------------------------------------------------------------------------------------
+thres-15-rho0	Commandline: ./INSIGHT-EM/bin/INSIGHT-EM-v1.2-beta -v -i 1000000 -fr -r 0.0 emOutput/RIMKLA_upregulated_GENE_cis_elements_distal.emInput.ins.f15
+thres-15-rho0	----------------------------------------------------------------------------------------------
+thres-15-rho0	       INSIGHT-EM v1.2-beta, May 2014 
+thres-15-rho0	----------------------------------------------------------------------------------------------
+thres-15-rho0	==> Processing site data file 'emOutput/RIMKLA_upregulated_GENE_cis_elements_distal.emInput.ins.f15' and extracting neutral model parameters
+thres-15-rho0	==> Data file consists of 693 sites in 6 genomic blocks.
+thres-15-rho0	==> Performing EM on selection parameters
+thres-15-rho0	    - EM stops after 1000000 iterations or when log-likelihood increase is below 1e-06
+thres-15-rho0	    - '.' = 100 iterations
+thres-15-rho0	    - fixing the following parameters: rho = 0.000000.
+thres-15-rho0	    - estimating the following parameters: eta (init = 1.000000) gamma (init = 0.500000).
+thres-15-rho0	    - using complete version of the model integrating over assignments to the ancestral states Zi.
+thres-15-rho0	----------------------------------------------------------------------------------------------
+thres-15-rho0	Progress: 
+thres-15-rho0	Done. Running time  0m00s.
+thres-15-rho0	----------------------------------------------------------------------------------------------
+thres-15-rho0	             rho      eta    gamma       Dp       Pw    alpha      tau
+thres-15-rho0	Estimates: 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000
+thres-15-rho0	StndrdErr: 0.000000    -nan    -nan    -nan    -nan -1.000000 -1.000000
+thres-15-rho0	----------------------------------------------------------------------------------------------
+thres-15-rho0	             iter     lnLd       diff       status
+thres-15-rho0	EM status:       2   -46.3855       0  converged
+thres-15-rho0	----------------------------------------------------------------------------------------------
+thres-15-eta0	Commandline: ./INSIGHT-EM/bin/INSIGHT-EM-v1.2-beta -v -i 1000000 -fe -e 0.0 emOutput/RIMKLA_upregulated_GENE_cis_elements_distal.emInput.ins.f15
+thres-15-eta0	----------------------------------------------------------------------------------------------
+thres-15-eta0	       INSIGHT-EM v1.2-beta, May 2014 
+thres-15-eta0	----------------------------------------------------------------------------------------------
+thres-15-eta0	==> Processing site data file 'emOutput/RIMKLA_upregulated_GENE_cis_elements_distal.emInput.ins.f15' and extracting neutral model parameters
+thres-15-eta0	==> Data file consists of 693 sites in 6 genomic blocks.
+thres-15-eta0	==> Performing EM on selection parameters
+thres-15-eta0	    - EM stops after 1000000 iterations or when log-likelihood increase is below 1e-06
+thres-15-eta0	    - '.' = 100 iterations
+thres-15-eta0	    - fixing the following parameters: eta = 0.000000.
+thres-15-eta0	    - estimating the following parameters: rho (init = 0.600000) gamma (init = 0.500000).
+thres-15-eta0	    - using complete version of the model integrating over assignments to the ancestral states Zi.
+thres-15-eta0	----------------------------------------------------------------------------------------------
+thres-15-eta0	Progress: .......... .......... .......... .......... .......... ......
+thres-15-eta0	Done. Running time  0m00s.
+thres-15-eta0	----------------------------------------------------------------------------------------------
+thres-15-eta0	             rho      eta    gamma       Dp       Pw    alpha      tau
+thres-15-eta0	Estimates: 0.006280 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000
+thres-15-eta0	*** Error:  when computing FIM-based confidence intervals:
+thres-15-eta0	     - entry [1,1] of variance-covariance matrix is negative.
+thres-15-eta0	  -0.000059 0.000000 1.036227
+thres-15-eta0	  0.000000 0.000000 0.000000
+thres-15-eta0	  1.036227 0.000000 -4.380507
+thres-15-eta0	StndrdErr: -1.000000 -1.000000 -1.000000 -1.000000 -1.000000 0.000000 0.000000
+thres-15-eta0	----------------------------------------------------------------------------------------------
+thres-15-eta0	             iter     lnLd       diff       status
+thres-15-eta0	EM status:    5685   -46.3875 9.99939e-07  converged
+thres-15-eta0	----------------------------------------------------------------------------------------------
+thres-15-gam0	Commandline: ./INSIGHT-EM/bin/INSIGHT-EM-v1.2-beta -v -i 1000000 -fg -g 0.0 emOutput/RIMKLA_upregulated_GENE_cis_elements_distal.emInput.ins.f15
+thres-15-gam0	----------------------------------------------------------------------------------------------
+thres-15-gam0	       INSIGHT-EM v1.2-beta, May 2014 
+thres-15-gam0	----------------------------------------------------------------------------------------------
+thres-15-gam0	==> Processing site data file 'emOutput/RIMKLA_upregulated_GENE_cis_elements_distal.emInput.ins.f15' and extracting neutral model parameters
+thres-15-gam0	==> Data file consists of 693 sites in 6 genomic blocks.
+thres-15-gam0	==> Performing EM on selection parameters
+thres-15-gam0	    - EM stops after 1000000 iterations or when log-likelihood increase is below 1e-06
+thres-15-gam0	    - '.' = 100 iterations
+thres-15-gam0	    - fixing the following parameters: gamma = 0.000000.
+thres-15-gam0	    - estimating the following parameters: rho (init = 0.600000) eta (init = 1.000000).
+thres-15-gam0	    - using complete version of the model integrating over assignments to the ancestral states Zi.
+thres-15-gam0	----------------------------------------------------------------------------------------------
+thres-15-gam0	Progress: .......... .......... .......... .......... .......... ......
+thres-15-gam0	Done. Running time  0m00s.
+thres-15-gam0	----------------------------------------------------------------------------------------------
+thres-15-gam0	             rho      eta    gamma       Dp       Pw    alpha      tau
+thres-15-gam0	Estimates: 0.006279 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000
+thres-15-gam0	*** Error:  when computing FIM-based confidence intervals:
+thres-15-gam0	     - entry [1,1] of variance-covariance matrix is negative.
+thres-15-gam0	  -0.000000 0.646398 0.000000
+thres-15-gam0	  0.646398 -1.704972 0.000000
+thres-15-gam0	  0.000000 0.000000 0.000000
+thres-15-gam0	StndrdErr: -1.000000 -1.000000 -1.000000 -1.000000 -1.000000 0.000000 0.000000
+thres-15-gam0	----------------------------------------------------------------------------------------------
+thres-15-gam0	             iter     lnLd       diff       status
+thres-15-gam0	EM status:    5679   -46.3875 9.9978e-07  converged
+thres-15-gam0	----------------------------------------------------------------------------------------------

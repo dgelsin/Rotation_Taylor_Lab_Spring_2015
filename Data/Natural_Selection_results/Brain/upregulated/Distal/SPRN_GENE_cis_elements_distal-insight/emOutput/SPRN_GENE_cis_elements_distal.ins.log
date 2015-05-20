@@ -1,0 +1,116 @@
+thres-15-beta	Commandline: ./INSIGHT-EM/bin/INSIGHT-EM-v1.2-beta -v -i 100000 -b emOutput/SPRN_GENE_cis_elements_distal.emInput.flankPoly.forBetas.ins.f15
+thres-15-beta	----------------------------------------------------------------------------------------------
+thres-15-beta	       INSIGHT-EM v1.2-beta, May 2014 
+thres-15-beta	----------------------------------------------------------------------------------------------
+thres-15-beta	==> Estimating the ratio beta1/(beta1+beta3) using neutral sites with low MAF.
+thres-15-beta	----------------------------------------------------------------------------------------------
+thres-15-beta	==> Processing site data file 'emOutput/SPRN_GENE_cis_elements_distal.emInput.flankPoly.forBetas.ins.f15' and lambda parameters
+thres-15-beta	==> Performing EM on ratio beta1/(beta1+beta3) [ initial value = 0.5 ]
+thres-15-beta	    - EM stops after 100000 iterations or when log-likelihood increase is below 1e-06
+thres-15-beta	    - '.' = 100 iterations
+thres-15-beta	----------------------------------------------------------------------------------------------
+thres-15-beta	Progress: 
+thres-15-beta	Done. Running time  0m00s.
+thres-15-beta	
+thres-15-beta	----------------------------------------------------------
+thres-15-beta	           beta1 
+thres-15-beta	Estimates: 0.951418 
+thres-15-beta	----------------------------------------------------------------------------------------------
+thres-15-beta	             iter     lnLd       diff       status
+thres-15-beta	EM status:       6   -41.4522 2.87834e-07  converged
+thres-15-beta	----------------------------------------------------------------------------------------------
+thres-15-beta	Beta Line: beta 0.7936 0.165877 0.0405234
+thres-15-main	Commandline: ./INSIGHT-EM/bin/INSIGHT-EM-v1.2-beta -v -i 1000000 -p emOutput/SPRN_GENE_cis_elements_distal.post.sites emOutput/SPRN_GENE_cis_elements_distal.emInput.ins.f15
+thres-15-main	----------------------------------------------------------------------------------------------
+thres-15-main	       INSIGHT-EM v1.2-beta, May 2014 
+thres-15-main	----------------------------------------------------------------------------------------------
+thres-15-main	==> Processing site data file 'emOutput/SPRN_GENE_cis_elements_distal.emInput.ins.f15' and extracting neutral model parameters
+thres-15-main	==> Data file consists of 7105 sites in 34 genomic blocks.
+thres-15-main	==> Performing EM on selection parameters
+thres-15-main	    - EM stops after 1000000 iterations or when log-likelihood increase is below 1e-06
+thres-15-main	    - '.' = 100 iterations
+thres-15-main	    - estimating the following parameters: rho (init = 0.600000) eta (init = 1.000000) gamma (init = 0.500000).
+thres-15-main	    - using complete version of the model integrating over assignments to the ancestral states Zi.
+thres-15-main	----------------------------------------------------------------------------------------------
+thres-15-main	Progress: .......... .......... .......... .......... .......... .....
+thres-15-main	Done. Running time  0m00s.
+thres-15-main	----------------------------------------------------------------------------------------------
+thres-15-main	==> Posterior counts output to file emOutput/SPRN_GENE_cis_elements_distal.post.sites.
+thres-15-main	----------------------------------------------------------------------------------------------
+thres-15-main	             rho      eta    gamma       Dp       Pw    alpha      tau
+thres-15-main	Estimates: 0.004995 31.272637 60.093678 0.630833 1.202230 0.135698 0.231772
+thres-15-main	StndrdErr: 0.018280 109.810860 243.132299 0.903114 0.827269 0.168558 0.135978
+thres-15-main	Posterior: 0.004995 -------- -------- 0.635049 1.201426 0.136229 0.177836
+thres-15-main	----------------------------------------------------------------------------------------------
+thres-15-main	             iter     lnLd       diff       status
+thres-15-main	EM status:    5562   -1059.27 9.97983e-07  converged
+thres-15-main	----------------------------------------------------------------------------------------------
+thres-15-rho0	Commandline: ./INSIGHT-EM/bin/INSIGHT-EM-v1.2-beta -v -i 1000000 -fr -r 0.0 emOutput/SPRN_GENE_cis_elements_distal.emInput.ins.f15
+thres-15-rho0	----------------------------------------------------------------------------------------------
+thres-15-rho0	       INSIGHT-EM v1.2-beta, May 2014 
+thres-15-rho0	----------------------------------------------------------------------------------------------
+thres-15-rho0	==> Processing site data file 'emOutput/SPRN_GENE_cis_elements_distal.emInput.ins.f15' and extracting neutral model parameters
+thres-15-rho0	==> Data file consists of 7105 sites in 34 genomic blocks.
+thres-15-rho0	==> Performing EM on selection parameters
+thres-15-rho0	    - EM stops after 1000000 iterations or when log-likelihood increase is below 1e-06
+thres-15-rho0	    - '.' = 100 iterations
+thres-15-rho0	    - fixing the following parameters: rho = 0.000000.
+thres-15-rho0	    - estimating the following parameters: eta (init = 1.000000) gamma (init = 0.500000).
+thres-15-rho0	    - using complete version of the model integrating over assignments to the ancestral states Zi.
+thres-15-rho0	----------------------------------------------------------------------------------------------
+thres-15-rho0	Progress: 
+thres-15-rho0	Done. Running time  0m00s.
+thres-15-rho0	----------------------------------------------------------------------------------------------
+thres-15-rho0	             rho      eta    gamma       Dp       Pw    alpha      tau
+thres-15-rho0	Estimates: 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000
+thres-15-rho0	StndrdErr: 0.000000    -nan    -nan    -nan    -nan -1.000000 -1.000000
+thres-15-rho0	----------------------------------------------------------------------------------------------
+thres-15-rho0	             iter     lnLd       diff       status
+thres-15-rho0	EM status:       2   -1060.79       0  converged
+thres-15-rho0	----------------------------------------------------------------------------------------------
+thres-15-eta0	Commandline: ./INSIGHT-EM/bin/INSIGHT-EM-v1.2-beta -v -i 1000000 -fe -e 0.0 emOutput/SPRN_GENE_cis_elements_distal.emInput.ins.f15
+thres-15-eta0	----------------------------------------------------------------------------------------------
+thres-15-eta0	       INSIGHT-EM v1.2-beta, May 2014 
+thres-15-eta0	----------------------------------------------------------------------------------------------
+thres-15-eta0	==> Processing site data file 'emOutput/SPRN_GENE_cis_elements_distal.emInput.ins.f15' and extracting neutral model parameters
+thres-15-eta0	==> Data file consists of 7105 sites in 34 genomic blocks.
+thres-15-eta0	==> Performing EM on selection parameters
+thres-15-eta0	    - EM stops after 1000000 iterations or when log-likelihood increase is below 1e-06
+thres-15-eta0	    - '.' = 100 iterations
+thres-15-eta0	    - fixing the following parameters: eta = 0.000000.
+thres-15-eta0	    - estimating the following parameters: rho (init = 0.600000) gamma (init = 0.500000).
+thres-15-eta0	    - using complete version of the model integrating over assignments to the ancestral states Zi.
+thres-15-eta0	----------------------------------------------------------------------------------------------
+thres-15-eta0	Progress: .......... .......... .......... .
+thres-15-eta0	Done. Running time  0m00s.
+thres-15-eta0	----------------------------------------------------------------------------------------------
+thres-15-eta0	             rho      eta    gamma       Dp       Pw    alpha      tau
+thres-15-eta0	Estimates: 0.003038 0.000000 86.563028 0.000000 1.191063 0.000000 0.208713
+thres-15-eta0	StndrdErr: 0.011848 0.000000 334.535289    -nan 0.824378 -1.000000 0.114599
+thres-15-eta0	----------------------------------------------------------------------------------------------
+thres-15-eta0	             iter     lnLd       diff       status
+thres-15-eta0	EM status:    3149   -1059.54 8.19615e-07  converged
+thres-15-eta0	----------------------------------------------------------------------------------------------
+thres-15-gam0	Commandline: ./INSIGHT-EM/bin/INSIGHT-EM-v1.2-beta -v -i 1000000 -fg -g 0.0 emOutput/SPRN_GENE_cis_elements_distal.emInput.ins.f15
+thres-15-gam0	----------------------------------------------------------------------------------------------
+thres-15-gam0	       INSIGHT-EM v1.2-beta, May 2014 
+thres-15-gam0	----------------------------------------------------------------------------------------------
+thres-15-gam0	==> Processing site data file 'emOutput/SPRN_GENE_cis_elements_distal.emInput.ins.f15' and extracting neutral model parameters
+thres-15-gam0	==> Data file consists of 7105 sites in 34 genomic blocks.
+thres-15-gam0	==> Performing EM on selection parameters
+thres-15-gam0	    - EM stops after 1000000 iterations or when log-likelihood increase is below 1e-06
+thres-15-gam0	    - '.' = 100 iterations
+thres-15-gam0	    - fixing the following parameters: gamma = 0.000000.
+thres-15-gam0	    - estimating the following parameters: rho (init = 0.600000) eta (init = 1.000000).
+thres-15-gam0	    - using complete version of the model integrating over assignments to the ancestral states Zi.
+thres-15-gam0	----------------------------------------------------------------------------------------------
+thres-15-gam0	Progress: .......... .......... ......
+thres-15-gam0	Done. Running time  0m00s.
+thres-15-gam0	----------------------------------------------------------------------------------------------
+thres-15-gam0	             rho      eta    gamma       Dp       Pw    alpha      tau
+thres-15-gam0	Estimates: 0.001598 97.930208 0.000000 0.631902 0.000000 0.135497 0.000000
+thres-15-gam0	StndrdErr: 0.007420 450.177420 0.000000 0.891896    -nan 0.165496 -1.000000
+thres-15-gam0	----------------------------------------------------------------------------------------------
+thres-15-gam0	             iter     lnLd       diff       status
+thres-15-gam0	EM status:    2606   -1060.51 5.45241e-07  converged
+thres-15-gam0	----------------------------------------------------------------------------------------------

@@ -1,0 +1,2 @@
+dataID	thres	rho	rho_stderr	E[A]	E[A]_stderr	E[W]	E[W]_stderr	alpha	alpha_stderr	tau	tau_stderr	eta	eta_stderr	gamma	gamma_stderr	lnLd	LRT[rho>0]	LRT[eta>0]	LRT[gamma>0]	em_status
+KCNJ6_GENE_cis_elements_proximal	f=15%	0.008428	0.096962	7.696585	8.479870	0.000000	0	0.642885	0.256100	0.000000	0	211.804535	2425.195170	0.000000	0	-22.574	1.521	1.5212	0	main-converged-rho0-converged-eta0-converged-gam0-converged

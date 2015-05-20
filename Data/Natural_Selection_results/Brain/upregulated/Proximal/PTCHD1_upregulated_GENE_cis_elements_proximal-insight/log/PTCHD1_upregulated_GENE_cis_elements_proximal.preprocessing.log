@@ -1,0 +1,9 @@
+==================================================================
+  Processing data set PTCHD1_upregulated_GENE_cis_elements_proximal
+==================================================================
+1.  filtering elements, time 0h0m0s
+    sites in original bed file: 300
+               autosomal sites: 300
+               after filtering: 0
+    no sites after basic filtering.
+Done with 0 sites after filtering. time 0h0m13s

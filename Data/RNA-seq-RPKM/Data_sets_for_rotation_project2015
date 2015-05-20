@@ -1,0 +1,31 @@
+Data sets:
+
+1. Total RNA sequencing reveals nascent transcription and
+widespread co-transcriptional splicing in the human brain
+Adam Ameur1, Ammar Zaghlool1, Jonatan Halvardson1, Anna Wetterbom2, Ulf Gyllensten1,
+Lucia Cavelier1,3 & Lars Feuk1,3
+RNA-seq, chimpanzee frontal cortex
+RNA-seq, human fetal brain
+RNA-seq, human adult brain
+RNA-seq, human fetal liver
+RNA-seq, human adult liver
+ EMBL-EBI
+Sequence Read Archive (European Nucleotide Archive) under accession
+number ERP000828.
+http://www.ebi.ac.uk/ena/data/search?query=ERP000828
+
+2. Detecting differential usage of exons from
+RNA-seq data
+Simon Anders,1,2 Alejandro Reyes,1 and Wolfgang Huber
+chimpanzee genome
+(CHIMP2.1.4 from Ensembl 64)
+http://www.ensembl.org/Pan_troglodytes/Info/Annotation
+
+3. Using high-density exon arrays to profile gene
+expression in closely related species
+Lan Lin1, Song Liu2, Heather Brockway3, Junhee Seok4, Peng Jiang1, Wing Hung Wong5 and Yi Xing1,6,*
+Affymetrix Human Exon 1.0 array data of chimpanzee cerebellum/liver and 
+Affymetrix HJAY data of human, chimpanzee and rhesus cerebellums
+GEO GSE15666
+http://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE15666
+

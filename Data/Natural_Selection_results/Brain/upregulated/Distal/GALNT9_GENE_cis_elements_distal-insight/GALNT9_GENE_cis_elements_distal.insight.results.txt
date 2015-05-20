@@ -1,0 +1,2 @@
+dataID	thres	rho	rho_stderr	E[A]	E[A]_stderr	E[W]	E[W]_stderr	alpha	alpha_stderr	tau	tau_stderr	eta	eta_stderr	gamma	gamma_stderr	lnLd	LRT[rho>0]	LRT[eta>0]	LRT[gamma>0]	em_status
+GALNT9_GENE_cis_elements_distal	f=15%	0.300838	0.202129	1.330650	0.991549	0.804091	0.940127	0.327856	0.218128	0.183099	0.212384	1.133616	0.524814	0.520909	0.368909	-1491.43	2.14	1.54	0.6	main-converged-rho0-converged-eta0-converged-gam0-converged

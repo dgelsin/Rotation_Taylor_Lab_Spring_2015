@@ -1,0 +1,126 @@
+thres-15-beta	Commandline: ./INSIGHT-EM/bin/INSIGHT-EM-v1.2-beta -v -i 100000 -b emOutput/AQP4_downregulated_GENE_cis_elements_distal.emInput.flankPoly.forBetas.ins.f15
+thres-15-beta	----------------------------------------------------------------------------------------------
+thres-15-beta	       INSIGHT-EM v1.2-beta, May 2014 
+thres-15-beta	----------------------------------------------------------------------------------------------
+thres-15-beta	==> Estimating the ratio beta1/(beta1+beta3) using neutral sites with low MAF.
+thres-15-beta	----------------------------------------------------------------------------------------------
+thres-15-beta	==> Processing site data file 'emOutput/AQP4_downregulated_GENE_cis_elements_distal.emInput.flankPoly.forBetas.ins.f15' and lambda parameters
+thres-15-beta	==> Performing EM on ratio beta1/(beta1+beta3) [ initial value = 0.5 ]
+thres-15-beta	    - EM stops after 100000 iterations or when log-likelihood increase is below 1e-06
+thres-15-beta	    - '.' = 100 iterations
+thres-15-beta	----------------------------------------------------------------------------------------------
+thres-15-beta	Progress: 
+thres-15-beta	Done. Running time  0m00s.
+thres-15-beta	
+thres-15-beta	----------------------------------------------------------
+thres-15-beta	           beta1 
+thres-15-beta	Estimates: 0.956670 
+thres-15-beta	----------------------------------------------------------------------------------------------
+thres-15-beta	             iter     lnLd       diff       status
+thres-15-beta	EM status:       5   -22.8514 9.0703e-08  converged
+thres-15-beta	----------------------------------------------------------------------------------------------
+thres-15-beta	Beta Line: beta 0.791489 0.172662 0.0358486
+thres-15-main	Commandline: ./INSIGHT-EM/bin/INSIGHT-EM-v1.2-beta -v -i 1000000 -p emOutput/AQP4_downregulated_GENE_cis_elements_distal.post.sites emOutput/AQP4_downregulated_GENE_cis_elements_distal.emInput.ins.f15
+thres-15-main	----------------------------------------------------------------------------------------------
+thres-15-main	       INSIGHT-EM v1.2-beta, May 2014 
+thres-15-main	----------------------------------------------------------------------------------------------
+thres-15-main	==> Processing site data file 'emOutput/AQP4_downregulated_GENE_cis_elements_distal.emInput.ins.f15' and extracting neutral model parameters
+thres-15-main	==> Data file consists of 1756 sites in 12 genomic blocks.
+thres-15-main	==> Performing EM on selection parameters
+thres-15-main	    - EM stops after 1000000 iterations or when log-likelihood increase is below 1e-06
+thres-15-main	    - '.' = 100 iterations
+thres-15-main	    - estimating the following parameters: rho (init = 0.600000) eta (init = 1.000000) gamma (init = 0.500000).
+thres-15-main	    - using complete version of the model integrating over assignments to the ancestral states Zi.
+thres-15-main	----------------------------------------------------------------------------------------------
+thres-15-main	Progress: .......... .......... .......... .......... .......... .......... 
+thres-15-main	Done. Running time  0m00s.
+thres-15-main	----------------------------------------------------------------------------------------------
+thres-15-main	==> Posterior counts output to file emOutput/AQP4_downregulated_GENE_cis_elements_distal.post.sites.
+thres-15-main	----------------------------------------------------------------------------------------------
+thres-15-main	             rho      eta    gamma       Dp       Pw    alpha      tau
+thres-15-main	Estimates: 0.047500 0.000000 3.969271 0.000000 0.914397 0.000000 0.165237
+thres-15-main	*** Error:  when computing FIM-based confidence intervals:
+thres-15-main	     - entry [1,1] of variance-covariance matrix is negative.
+thres-15-main	  -0.026438 1.500993 1.776063
+thres-15-main	  1.500993 -17.705535 -100.426369
+thres-15-main	  1.776063 -100.426369 -70.695365
+thres-15-main	StndrdErr: -1.000000 -1.000000 -1.000000 -1.000000 -1.000000 0.000000 0.000000
+thres-15-main	Posterior: 0.047495 -------- -------- 0.000000 0.914639 0.000000 0.146010
+thres-15-main	----------------------------------------------------------------------------------------------
+thres-15-main	             iter     lnLd       diff       status
+thres-15-main	EM status:    6025   -148.821 9.99982e-07  converged
+thres-15-main	----------------------------------------------------------------------------------------------
+thres-15-rho0	Commandline: ./INSIGHT-EM/bin/INSIGHT-EM-v1.2-beta -v -i 1000000 -fr -r 0.0 emOutput/AQP4_downregulated_GENE_cis_elements_distal.emInput.ins.f15
+thres-15-rho0	----------------------------------------------------------------------------------------------
+thres-15-rho0	       INSIGHT-EM v1.2-beta, May 2014 
+thres-15-rho0	----------------------------------------------------------------------------------------------
+thres-15-rho0	==> Processing site data file 'emOutput/AQP4_downregulated_GENE_cis_elements_distal.emInput.ins.f15' and extracting neutral model parameters
+thres-15-rho0	==> Data file consists of 1756 sites in 12 genomic blocks.
+thres-15-rho0	==> Performing EM on selection parameters
+thres-15-rho0	    - EM stops after 1000000 iterations or when log-likelihood increase is below 1e-06
+thres-15-rho0	    - '.' = 100 iterations
+thres-15-rho0	    - fixing the following parameters: rho = 0.000000.
+thres-15-rho0	    - estimating the following parameters: eta (init = 1.000000) gamma (init = 0.500000).
+thres-15-rho0	    - using complete version of the model integrating over assignments to the ancestral states Zi.
+thres-15-rho0	----------------------------------------------------------------------------------------------
+thres-15-rho0	Progress: 
+thres-15-rho0	Done. Running time  0m00s.
+thres-15-rho0	----------------------------------------------------------------------------------------------
+thres-15-rho0	             rho      eta    gamma       Dp       Pw    alpha      tau
+thres-15-rho0	Estimates: 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000
+thres-15-rho0	StndrdErr: 0.000000    -nan    -nan    -nan    -nan -1.000000 -1.000000
+thres-15-rho0	----------------------------------------------------------------------------------------------
+thres-15-rho0	             iter     lnLd       diff       status
+thres-15-rho0	EM status:       2   -148.939       0  converged
+thres-15-rho0	----------------------------------------------------------------------------------------------
+thres-15-eta0	Commandline: ./INSIGHT-EM/bin/INSIGHT-EM-v1.2-beta -v -i 1000000 -fe -e 0.0 emOutput/AQP4_downregulated_GENE_cis_elements_distal.emInput.ins.f15
+thres-15-eta0	----------------------------------------------------------------------------------------------
+thres-15-eta0	       INSIGHT-EM v1.2-beta, May 2014 
+thres-15-eta0	----------------------------------------------------------------------------------------------
+thres-15-eta0	==> Processing site data file 'emOutput/AQP4_downregulated_GENE_cis_elements_distal.emInput.ins.f15' and extracting neutral model parameters
+thres-15-eta0	==> Data file consists of 1756 sites in 12 genomic blocks.
+thres-15-eta0	==> Performing EM on selection parameters
+thres-15-eta0	    - EM stops after 1000000 iterations or when log-likelihood increase is below 1e-06
+thres-15-eta0	    - '.' = 100 iterations
+thres-15-eta0	    - fixing the following parameters: eta = 0.000000.
+thres-15-eta0	    - estimating the following parameters: rho (init = 0.600000) gamma (init = 0.500000).
+thres-15-eta0	    - using complete version of the model integrating over assignments to the ancestral states Zi.
+thres-15-eta0	----------------------------------------------------------------------------------------------
+thres-15-eta0	Progress: .......... .......... .......... .......... .......... ......
+thres-15-eta0	Done. Running time  0m00s.
+thres-15-eta0	----------------------------------------------------------------------------------------------
+thres-15-eta0	             rho      eta    gamma       Dp       Pw    alpha      tau
+thres-15-eta0	Estimates: 0.047496 0.000000 3.969539 0.000000 0.914381 0.000000 0.165234
+thres-15-eta0	StndrdErr: 0.317506 0.000000 22.340326    -nan 2.019132 -1.000000 0.334446
+thres-15-eta0	----------------------------------------------------------------------------------------------
+thres-15-eta0	             iter     lnLd       diff       status
+thres-15-eta0	EM status:    5667   -148.821 9.99504e-07  converged
+thres-15-eta0	----------------------------------------------------------------------------------------------
+thres-15-gam0	Commandline: ./INSIGHT-EM/bin/INSIGHT-EM-v1.2-beta -v -i 1000000 -fg -g 0.0 emOutput/AQP4_downregulated_GENE_cis_elements_distal.emInput.ins.f15
+thres-15-gam0	----------------------------------------------------------------------------------------------
+thres-15-gam0	       INSIGHT-EM v1.2-beta, May 2014 
+thres-15-gam0	----------------------------------------------------------------------------------------------
+thres-15-gam0	==> Processing site data file 'emOutput/AQP4_downregulated_GENE_cis_elements_distal.emInput.ins.f15' and extracting neutral model parameters
+thres-15-gam0	==> Data file consists of 1756 sites in 12 genomic blocks.
+thres-15-gam0	==> Performing EM on selection parameters
+thres-15-gam0	    - EM stops after 1000000 iterations or when log-likelihood increase is below 1e-06
+thres-15-gam0	    - '.' = 100 iterations
+thres-15-gam0	    - fixing the following parameters: gamma = 0.000000.
+thres-15-gam0	    - estimating the following parameters: rho (init = 0.600000) eta (init = 1.000000).
+thres-15-gam0	    - using complete version of the model integrating over assignments to the ancestral states Zi.
+thres-15-gam0	----------------------------------------------------------------------------------------------
+thres-15-gam0	Progress: .......... .......... .......... .......... .......... .......... ..
+thres-15-gam0	Done. Running time  0m00s.
+thres-15-gam0	----------------------------------------------------------------------------------------------
+thres-15-gam0	             rho      eta    gamma       Dp       Pw    alpha      tau
+thres-15-gam0	Estimates: 0.001513 0.000000 0.000000 0.000000 0.000000 0.000000 0.000000
+thres-15-gam0	*** Error:  when computing FIM-based confidence intervals:
+thres-15-gam0	     - entry [1,1] of variance-covariance matrix is negative.
+thres-15-gam0	  -0.000007 0.703559 0.000000
+thres-15-gam0	  0.703559 -8.448542 0.000000
+thres-15-gam0	  0.000000 0.000000 0.000000
+thres-15-gam0	StndrdErr: -1.000000 -1.000000 -1.000000 -1.000000 -1.000000 0.000000 0.000000
+thres-15-gam0	----------------------------------------------------------------------------------------------
+thres-15-gam0	             iter     lnLd       diff       status
+thres-15-gam0	EM status:    6218   -148.941 9.99965e-07  converged
+thres-15-gam0	----------------------------------------------------------------------------------------------

@@ -1,0 +1,2 @@
+dataID	thres	rho	rho_stderr	E[A]	E[A]_stderr	E[W]	E[W]_stderr	alpha	alpha_stderr	tau	tau_stderr	eta	eta_stderr	gamma	gamma_stderr	lnLd	LRT[rho>0]	LRT[eta>0]	LRT[gamma>0]	em_status
+PACSIN1_GENE_cis_elements_proximal	f=15%	0.001287	0.002270	0.000000	2.264203	0.000000	-nan	0.000000	1.134570	0.000000	-1.000000	0.000000	880.765528	0.000000	498.781655	-9.87157	-0.0008	-2e-05	-2e-05	main-converged-rho0-converged-eta0-converged-gam0-converged

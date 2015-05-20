@@ -1,0 +1,2 @@
+dataID	thres	rho	rho_stderr	E[A]	E[A]_stderr	E[W]	E[W]_stderr	alpha	alpha_stderr	tau	tau_stderr	eta	eta_stderr	gamma	gamma_stderr	lnLd	LRT[rho>0]	LRT[eta>0]	LRT[gamma>0]	em_status
+MEGF10_downregulated_GENE_cis_elements_distal	f=15%	0.444412	0.320598	1.864964	1.324538	1.772575	1.650268	0.508369	0.303845	0.375913	0.340743	1.292728	0.611818	0.753025	0.374444	-410.97	1.472	1.46	0.822	main-converged-rho0-converged-eta0-converged-gam0-converged

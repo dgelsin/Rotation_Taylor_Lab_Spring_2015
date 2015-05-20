@@ -1,0 +1,31 @@
+==================================================================
+  Processing data set XKR7_upregulated_GENE_cis_elements_proximal
+==================================================================
+1.  filtering elements, time 0h0m0s
+    sites in original bed file: 150
+               autosomal sites: 150
+               after filtering: 77
+2.  generating polymorphism summary for all sites, time 0h0m8s
+3.  retrieving ancestral priors for all sites, time 0h0m8s
+Sat May  9 05:02:02 EDT 2015
+Sat May  9 05:02:02 EDT 2015
+    prior probabilities for 'A'... .
+Sat May  9 05:02:02 EDT 2015
+    prior probabilities for 'C'... .
+Sat May  9 05:02:02 EDT 2015
+    prior probabilities for 'G'... .
+Sat May  9 05:02:02 EDT 2015
+    prior probabilities for 'T'... .
+Sat May  9 05:02:02 EDT 2015
+Sat May  9 05:02:02 EDT 2015
+4.  combining polymorphism summary with ancestral priors, time 0h0m8s
+5.  filtering sites with no variation or ancestral data, time 0h0m8s
+    total number of sites:    77
+    sites with sequence data: 0
+6.  retrieving lambdas and thetas from appropriate genomic blocks, time 0h0m8s
+    found 0 total blocks with lambda values.
+    found 0 blocks with at least 100 sites with information on lamda.
+    no sites after filtering for data in flanking neutral sites.
+    tarring intermediate site summaries, time 0h0m8s
+tar: Removing leading `/' from member names
+Done with 0 sites after filtering. time 0h0m8s

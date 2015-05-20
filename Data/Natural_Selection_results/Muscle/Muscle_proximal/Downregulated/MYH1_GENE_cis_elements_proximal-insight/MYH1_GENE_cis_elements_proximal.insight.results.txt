@@ -1,0 +1,2 @@
+dataID	thres	rho	rho_stderr	E[A]	E[A]_stderr	E[W]	E[W]_stderr	alpha	alpha_stderr	tau	tau_stderr	eta	eta_stderr	gamma	gamma_stderr	lnLd	LRT[rho>0]	LRT[eta>0]	LRT[gamma>0]	em_status
+MYH1_GENE_cis_elements_proximal	f=15%	0.002413	0.002880	0.000000	2.874664	0.000000	-nan	0.000000	1.098742	0.000000	-1.000000	0.000000	454.244756	0.000000	459.423983	-7.80692	-0.00118	0	0	main-converged-rho0-converged-eta0-converged-gam0-converged

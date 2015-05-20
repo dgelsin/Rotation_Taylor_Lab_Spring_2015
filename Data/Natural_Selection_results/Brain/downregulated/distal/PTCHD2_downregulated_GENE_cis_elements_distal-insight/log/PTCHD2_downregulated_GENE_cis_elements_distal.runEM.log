@@ -1,0 +1,41 @@
+==================================================================
+  Running INSIGHT-EM on data set PTCHD2_downregulated_GENE_cis_elements_distal
+  Frequency thresholds: 15
+==================================================================
+    adding pseudo-count sites, time 0h0m0s
+
+==================================================================
+  Estimating beta1, beta2, and beta3 for freq threshold 15 on file emOutput/PTCHD2_downregulated_GENE_cis_elements_distal.emInput.flankPoly.forBetas.ins
+==================================================================
+1.  applying frequency threshold to input file, time 0h0m0s
+2.  estimating beta2 from L and H counts in flankPoly file, time 0h0m0s
+    beta2 = 0.16726
+3.  estimating beta1 and beta3 by applying INSIGHT-EM to flank input file, time 0h0m0s
+    Invoking  ./INSIGHT-EM/bin/INSIGHT-EM-v1.2-beta -v -i 100000 -b emOutput/PTCHD2_downregulated_GENE_cis_elements_distal.emInput.flankPoly.forBetas.ins.f15
+    INSIGHT-EM converged.
+4.  getting beta line, time 0h0m0s
+    Beta line: beta 0.764972 0.16726 0.0677684
+Done. time 0h0m0s
+
+==================================================================
+  Estimating selection parameters for freq threshold 15 on file emOutput/PTCHD2_downregulated_GENE_cis_elements_distal.emInput.ins
+==================================================================
+1.  applying frequency threshold 15 to input file and adding beta line, time 0h0m0s
+2.  estimating selection parameters, time 0h0m0s
+    Invoking  ./INSIGHT-EM/bin/INSIGHT-EM-v1.2-beta -v -i 1000000 -p emOutput/PTCHD2_downregulated_GENE_cis_elements_distal.post.sites emOutput/PTCHD2_downregulated_GENE_cis_elements_distal.emInput.ins.f15
+    INSIGHT-EM converged.
+3.  restricting rho=0 for LRT for selection, time 0h0m1s
+    Invoking  ./INSIGHT-EM/bin/INSIGHT-EM-v1.2-beta -v -i 1000000 -fr -r 0.0 emOutput/PTCHD2_downregulated_GENE_cis_elements_distal.emInput.ins.f15
+    INSIGHT-EM converged.
+4.  restricting eta=0 for LRT for positive selection, time 0h0m1s
+    Invoking  ./INSIGHT-EM/bin/INSIGHT-EM-v1.2-beta -v -i 1000000 -fe -e 0.0 emOutput/PTCHD2_downregulated_GENE_cis_elements_distal.emInput.ins.f15
+    INSIGHT-EM converged.
+5.  restricting gamma=0 for LRT for selection, time 0h0m1s
+    Invoking  ./INSIGHT-EM/bin/INSIGHT-EM-v1.2-beta -v -i 1000000 -fg -g 0.0 emOutput/PTCHD2_downregulated_GENE_cis_elements_distal.emInput.ins.f15
+    INSIGHT-EM converged.
+Done. time 0h0m1s
+
+==================================================================
+  Processing results 
+==================================================================
+Done. time 0h0m1s

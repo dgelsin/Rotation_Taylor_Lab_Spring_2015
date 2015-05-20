@@ -1,0 +1,31 @@
+==================================================================
+  Processing data set MAFA_GENE_cis_elements_proximal
+==================================================================
+1.  filtering elements, time 0h0m0s
+    sites in original bed file: 300
+               autosomal sites: 300
+               after filtering: 188
+2.  generating polymorphism summary for all sites, time 0h0m14s
+3.  retrieving ancestral priors for all sites, time 0h0m14s
+Fri May  8 12:34:50 EDT 2015
+Fri May  8 12:34:50 EDT 2015
+    prior probabilities for 'A'... .
+Fri May  8 12:34:50 EDT 2015
+    prior probabilities for 'C'... .
+Fri May  8 12:34:50 EDT 2015
+    prior probabilities for 'G'... .
+Fri May  8 12:34:50 EDT 2015
+    prior probabilities for 'T'... .
+Fri May  8 12:34:50 EDT 2015
+Fri May  8 12:34:50 EDT 2015
+4.  combining polymorphism summary with ancestral priors, time 0h0m14s
+5.  filtering sites with no variation or ancestral data, time 0h0m14s
+    total number of sites:    188
+    sites with sequence data: 0
+6.  retrieving lambdas and thetas from appropriate genomic blocks, time 0h0m14s
+    found 0 total blocks with lambda values.
+    found 0 blocks with at least 100 sites with information on lamda.
+    no sites after filtering for data in flanking neutral sites.
+    tarring intermediate site summaries, time 0h0m15s
+tar: Removing leading `/' from member names
+Done with 0 sites after filtering. time 0h0m15s

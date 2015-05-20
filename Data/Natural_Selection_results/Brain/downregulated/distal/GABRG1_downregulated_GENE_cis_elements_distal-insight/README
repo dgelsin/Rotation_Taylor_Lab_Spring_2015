@@ -1,0 +1,140 @@
+**************************************************************************************
+  This file contains a short description on how to read INSIGHT results
+  for collection of elements 'GABRG1_downregulated_GENE_cis_elements_distal'. 
+  (A) List of files
+  (B) Reading the results
+**************************************************************************************
+
+**************************************************************************************
+(A) List of files.
+**************************************************************************************
+
+GABRG1_downregulated_GENE_cis_elements_distal.insight.results.txt
+   - main results file containing table of INSIGHT estimates (see description below)
+
+GABRG1_downregulated_GENE_cis_elements_distal.insight.results.pdf
+   - a plot containing summary of INSIGHT estimates, as given in GABRG1_downregulated_GENE_cis_elements_distal.insight.results.txt
+
+GABRG1_downregulated_GENE_cis_elements_distal.data.summary.txt
+   - file containing statistics on the analyzed data, e.g. number of sites after filtering (see description below)
+
+INSIGHTresults.html
+   - html page with table describing the main setp and status updates, as seen in the "results" webpage for the analysis
+
+bed/GABRG1_downregulated_GENE_cis_elements_distal.bed
+   - original BED file
+
+bed/GABRG1_downregulated_GENE_cis_elements_distal.filtered.bed
+   - BED file containing positions after initial filtering
+
+emInput/GABRG1_downregulated_GENE_cis_elements_distal.ins
+   - main input file for INSIGHT-EM inference of selection parameters
+
+emInput/GABRG1_downregulated_GENE_cis_elements_distal.flankPoly.forBetas.ins
+   - input file for INSIGHT-EM
+
+emOutput/GABRG1_downregulated_GENE_cis_elements_distal.ins.log
+   - file containing concatenated logs of the various INSIGHT-EM analyses
+
+emOutput/GABRG1_downregulated_GENE_cis_elements_distal.post.sites
+   - file containing table with posterior probabilities for hidden variable configurations for all sites (see description below)
+
+log/GABRG1_downregulated_GENE_cis_elements_distal.runEM.log
+   - log file for main script running INSIGHT analysis
+
+log/GABRG1_downregulated_GENE_cis_elements_distal.preprocessing.log
+   - log file for main script processing sequence data in order to generate EM input files
+
+**************************************************************************************
+(B) Reading the results.
+**************************************************************************************
+
+Step 1: Data summary for analysis:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        The data summary file GABRG1_downregulated_GENE_cis_elements_distal.data.summary.txt looks like this:
+
+                X	initial number of sites, with redundancies
+        ---------------------------------------------------------------------------
+               F1	non-autosomal
+               F2	redundant or filtered due to genomic filtering
+               F3	no polymorphism data or insufficient outgroup sequence data
+               F4	no sufficient data from flanking neutral sites
+        ---------------------------------------------------------------------------
+                Y	final, non-redundant, after all filtering
+
+	       X   indicates the number of nucleotide positions in input set (with multiple counts for redundant instances)
+          Y   indicates the number of nucleotide positions analyzed, after applying all filters, and counting each
+              unique position once
+        F1-F4 indicate the number of nucleotide positions covered by one of our filters. Filters are described
+              in cumulative form, such that Y = X-F1-F2-F3-F4.
+        
+Step 2: Insufficient data for analysis:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        If number of sites after filtering (Y) is 0, then analysis is not further pursued,
+        and file GABRG1_downregulated_GENE_cis_elements_distal.insight.results.txt contains the following message:
+        'No sites remained after filtering. See log/GABRG1_downregulated_GENE_cis_elements_distal.preprocessing.log'
+        A similar message appears if the number of flanking neutral polymorphic sites is insufficient
+        for reliable estimation of beta1 and beta3.
+
+Step 3: Graphical summary of results:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        The graphical summary is shown in file GABRG1_downregulated_GENE_cis_elements_distal.insight.results.pdf.
+        The plot contains three bars for E[Pw], rho, and E[Dp] (in that order).
+        The left axis provides the scale for rho, and the right axis provides the scale of the expected
+        counts E[Pw] and E[Dp] (scaled per kbp). The estimates are shown with the curvature-based standard
+        errors, and below each bar corresponding to a value that is significantly greater than zero (with
+        p<0.01) there is a significance indicator in red ('*' for rho, 'w' for E[Pw], and 'p' for E[Dp]).
+        Significance is assessed using the appropriate LRT, using a chi-squared distribution with
+        three degrees of freedom for rho, and one degree of freedom for gamma (E[Pw]) and eta (E[Dp]).
+
+
+Step 4: Textual summary of results:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        The textual summary is shown in file GABRG1_downregulated_GENE_cis_elements_distal.insight.results.txt.
+        The result line lists estimates and curvature-based standard errors for
+        rho, E[Dp], E[Pw], alpha, tau, eta, and gamma (alpha and tau are the fractions of divergences
+        / polymorphisms under positive / weak negative selection, respectively). Additionally, the
+        log-likelihood of the MLE is also given, and the LRT statistics for rho>0, eta>0, and gamma>0
+        (the LRT statistics is twice the difference between the log-likelihood of the MLE and the log
+        likelihood of the restricted solution). The last entry of the results line indicates the status
+        of the four INSIGHT-EM runs: main run, run with rho=0, run with eta=0, run with gamma=0. If these
+        have not converged, consult with the INSIGHT-EM user manual (see downloads in INSIGHT website
+        http://compgen.bscb.cornell.edu/INSIGHT/).
+
+
+Step 5: Posterior probability table:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        The posterior probability table is given in file emOutput/GABRG1_downregulated_GENE_cis_elements_distal.post.sites.
+        The table contains the following columns:
+        - site     - id of the site, as given in the EM input file (contains information on chromosome position)
+        - NoDiv    - Probability site is monomorphic non-divergent
+                     (NoDiv = NoDiv_N + NoDiv_S)
+        - NoDiv_N  - Probability site is monomorphic non-divergent and neutral
+        - NoDiv_S  - Probability site is monomorphic non-divergent and under selection
+        - Div      - Probability site is monomorphic divergent
+                     (Div = Div_N + Div_S)
+                     (NoDiv + Div = 1 for M sites)
+        - Div_N    - Probability site is monomorphic divergent and neutral
+        - Div_S    - Probability site is monomorphic divergent and under selection
+        - Poly     - Probability site is polymorphic
+                     (Poly = 1 for L and H sites)
+        - PolyL_N  - Probability site is polymorphic, with low derived allele frequency (<f) and neutral
+        - PolyH1_N - Probability site is polymorphic, with intermediate derived allele frequency ( in [f,1-f]) and neutral
+        - PolyH2_N - Probability site is polymorphic, with high derived allele frequency (>1-f) and neutral
+        - PolyL_S  - Probability site is polymorphic, with low derived allele frequency (<f) and under selection
+                     (PolyL_N + PolyH2_N + PolyL_S = 1 for L sites and PolyH1_N = 1 for H sites)
+
+Step 6: Follow-up analysis:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+        INSIGHT provides the framework to quickly refine the analysis by analyzing subsets of the data,
+        considering alternative thresholds for L/H polymorphic sites, etc. These can be achieved by
+        downloading an updated version of INSIGHT-EM and accompanying scripts from the INSIGHT website
+        (http://compgen.bscb.cornell.edu/INSIGHT/), and re-running the EM on the EM input files computed
+        as part of this analysis. The INSIGHT-EM user manual provides more information and examples.
+        This approach avoids the time consuming step of computing the EM input file for each variant of
+        the analysis.
+
+**************************************************************************************
+  END OF FILE
+**************************************************************************************
+

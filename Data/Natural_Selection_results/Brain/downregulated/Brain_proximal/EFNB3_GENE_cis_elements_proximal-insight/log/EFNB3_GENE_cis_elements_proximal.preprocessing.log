@@ -1,0 +1,31 @@
+==================================================================
+  Processing data set EFNB3_GENE_cis_elements_proximal
+==================================================================
+1.  filtering elements, time 0h0m0s
+    sites in original bed file: 150
+               autosomal sites: 150
+               after filtering: 130
+2.  generating polymorphism summary for all sites, time 0h0m5s
+3.  retrieving ancestral priors for all sites, time 0h0m5s
+Thu May  7 16:34:22 EDT 2015
+Thu May  7 16:34:22 EDT 2015
+    prior probabilities for 'A'... .
+Thu May  7 16:34:22 EDT 2015
+    prior probabilities for 'C'... .
+Thu May  7 16:34:22 EDT 2015
+    prior probabilities for 'G'... .
+Thu May  7 16:34:22 EDT 2015
+    prior probabilities for 'T'... .
+Thu May  7 16:34:22 EDT 2015
+Thu May  7 16:34:22 EDT 2015
+4.  combining polymorphism summary with ancestral priors, time 0h0m5s
+5.  filtering sites with no variation or ancestral data, time 0h0m5s
+    total number of sites:    130
+    sites with sequence data: 0
+6.  retrieving lambdas and thetas from appropriate genomic blocks, time 0h0m5s
+    found 0 total blocks with lambda values.
+    found 0 blocks with at least 100 sites with information on lamda.
+    no sites after filtering for data in flanking neutral sites.
+    tarring intermediate site summaries, time 0h0m6s
+tar: Removing leading `/' from member names
+Done with 0 sites after filtering. time 0h0m6s

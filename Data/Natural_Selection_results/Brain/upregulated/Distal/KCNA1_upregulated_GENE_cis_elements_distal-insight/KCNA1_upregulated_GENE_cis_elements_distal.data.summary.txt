@@ -1,0 +1,8 @@
+     4050	initial number of sites, with redundancies
+---------------------------------------------------------------------------
+        0	non-autosomal
+      335	redundant or filtered due to genomic filtering
+      713	no polymorphism data or insufficient outgroup sequence data
+        0	no sufficient data from flanking neutral sites
+---------------------------------------------------------------------------
+     3002	final, non-redundant, after all filtering

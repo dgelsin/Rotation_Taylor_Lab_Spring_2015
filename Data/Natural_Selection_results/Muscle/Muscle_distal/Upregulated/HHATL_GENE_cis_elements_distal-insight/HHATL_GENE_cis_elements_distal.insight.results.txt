@@ -1,0 +1,2 @@
+dataID	thres	rho	rho_stderr	E[A]	E[A]_stderr	E[W]	E[W]_stderr	alpha	alpha_stderr	tau	tau_stderr	eta	eta_stderr	gamma	gamma_stderr	lnLd	LRT[rho>0]	LRT[eta>0]	LRT[gamma>0]	em_status
+HHATL_GENE_cis_elements_distal	f=15%	0.210202	0.211270	1.962377	0.951638	0.437985	0.964153	0.420836	0.172829	0.097621	0.213783	2.730175	1.947036	0.406474	0.588720	-1158.95	6.06	6.08	0.16	main-converged-rho0-converged-eta0-converged-gam0-converged

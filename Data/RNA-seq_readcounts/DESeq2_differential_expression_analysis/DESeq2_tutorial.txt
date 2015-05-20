@@ -1,0 +1,912 @@
+
+R version 3.1.1 (2014-07-10) -- "Sock it to Me"
+Copyright (C) 2014 The R Foundation for Statistical Computing
+Platform: x86_64-apple-darwin13.1.0 (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+[R.app GUI 1.65 (6784) x86_64-apple-darwin13.1.0]
+
+[History restored from /Users/cmdb/.Rapp.history]
+
+> library('DESeq2')
+Loading required package: S4Vectors
+Loading required package: stats4
+Loading required package: BiocGenerics
+Loading required package: parallel
+
+Attaching package: ‘BiocGenerics’
+
+The following objects are masked from ‘package:parallel’:
+
+    clusterApply, clusterApplyLB, clusterCall, clusterEvalQ, clusterExport,
+    clusterMap, parApply, parCapply, parLapply, parLapplyLB, parRapply,
+    parSapply, parSapplyLB
+
+The following object is masked from ‘package:stats’:
+
+    xtabs
+
+The following objects are masked from ‘package:base’:
+
+    anyDuplicated, append, as.data.frame, as.vector, cbind, colnames, do.call,
+    duplicated, eval, evalq, Filter, Find, get, intersect, is.unsorted, lapply,
+    Map, mapply, match, mget, order, paste, pmax, pmax.int, pmin, pmin.int,
+    Position, rank, rbind, Reduce, rep.int, rownames, sapply, setdiff, sort,
+    table, tapply, union, unique, unlist, unsplit
+
+Loading required package: IRanges
+Loading required package: GenomicRanges
+Loading required package: GenomeInfoDb
+Loading required package: Rcpp
+Loading required package: RcppArmadillo
+Warning messages:
+1: package ‘DESeq2’ was built under R version 3.1.2 
+2: package ‘BiocGenerics’ was built under R version 3.1.2 
+3: package ‘IRanges’ was built under R version 3.1.2 
+4: package ‘GenomicRanges’ was built under R version 3.1.2 
+5: package ‘GenomeInfoDb’ was built under R version 3.1.3 
+6: package ‘Rcpp’ was built under R version 3.1.3 
+7: package ‘RcppArmadillo’ was built under R version 3.1.3 
+> directory<-"/Users/cmdb/Desktop/readcounts/readcount_output"
+> sampleFiles <- grep("readcounts_out",list.files(directory),value=True)
+Error in grep("readcounts_out", list.files(directory), value = True) : 
+  object 'True' not found
+> sampleFiles <- grep("readcounts_out",list.files(directory),value=True)
+Error in grep("readcounts_out", list.files(directory), value = True) : 
+  object 'True' not found
+> sampleFiles <- c("read",list.files(directory),value=True)
+Error: object 'True' not found
+> sampleFiles <- c("read",list.files(directory)
++ 
++ 
++ samplesFiles
+Error: unexpected symbol in:
+"
+samplesFiles"
+> sampleFiles <- grep("readcounts_out",list.files(directory),value=TRUE)
+> sampleFiles
+ [1] "cM1_readcounts_out" "cM2_readcounts_out" "cM3_readcounts_out" "cP1_readcounts_out"
+ [5] "cP2_readcounts_out" "cP3_readcounts_out" "hM1_readcounts_out" "hM2_readcounts_out"
+ [9] "hM3_readcounts_out" "hP1_readcounts_out" "hP2_readcounts_out" "hP3_readcounts_out"
+> sampleCondition <- ("Muscle", "Muscle", )
+Error: unexpected ',' in "sampleCondition <- ("Muscle","
+> sampleCondition <- ("Muscle", "Muscle", "Muscle", "Prefrontal_Cortex", "Prefrontal_Cortex", "Prefrontal_Cortex", "Muscle", "Muscle", "Muscle", "Prefrontal_Cortex", "Prefrontal_Cortex", "Prefrontal_Cortex")
+Error: unexpected ',' in "sampleCondition <- ("Muscle","
+> sampleCondition <- ("Muscle", "Muscle", "Muscle", "Prefrontal_Cortex", "Prefrontal_Cortex", "Prefrontal_Cortex", "Muscle", "Muscle", "Muscle", "Prefrontal_Cortex", "Prefrontal_Cortex", "Prefrontal_Cortex")
+Error: unexpected ',' in "sampleCondition <- ("Muscle","
+> sampleCondition <- ("Muscle", "Muscle", "Muscle", "Prefrontal_Cortex", "Prefrontal_Cortex", "Prefrontal_Cortex", "Muscle", "Muscle", "Muscle", "Prefrontal_Cortex", "Prefrontal_Cortex", "Prefrontal_Cortex")
+Error: unexpected ',' in "sampleCondition <- ("Muscle","
+> sampleCondition <- c("Muscle", "Muscle", "Muscle", "Prefrontal_Cortex", "Prefrontal_Cortex", "Prefrontal_Cortex", "Muscle", "Muscle", "Muscle", "Prefrontal_Cortex", "Prefrontal_Cortex", "Prefrontal_Cortex")
+> sampleCondition
+ [1] "Muscle"            "Muscle"            "Muscle"            "Prefrontal_Cortex"
+ [5] "Prefrontal_Cortex" "Prefrontal_Cortex" "Muscle"            "Muscle"           
+ [9] "Muscle"            "Prefrontal_Cortex" "Prefrontal_Cortex" "Prefrontal_Cortex"
+> sampleTable <- data.frame(sampleName=sampleFiles, fileName=sampleFiles, condition=sampleCondition)
+> sampleTable
+           sampleName           fileName         condition
+1  cM1_readcounts_out cM1_readcounts_out            Muscle
+2  cM2_readcounts_out cM2_readcounts_out            Muscle
+3  cM3_readcounts_out cM3_readcounts_out            Muscle
+4  cP1_readcounts_out cP1_readcounts_out Prefrontal_Cortex
+5  cP2_readcounts_out cP2_readcounts_out Prefrontal_Cortex
+6  cP3_readcounts_out cP3_readcounts_out Prefrontal_Cortex
+7  hM1_readcounts_out hM1_readcounts_out            Muscle
+8  hM2_readcounts_out hM2_readcounts_out            Muscle
+9  hM3_readcounts_out hM3_readcounts_out            Muscle
+10 hP1_readcounts_out hP1_readcounts_out Prefrontal_Cortex
+11 hP2_readcounts_out hP2_readcounts_out Prefrontal_Cortex
+12 hP3_readcounts_out hP3_readcounts_out Prefrontal_Cortex
+> ddsHTSeq<-DESeqDataSetFromHTseqCount(sampleTable=sampleTable, directory=directorym design=~condition)
+Error: unexpected symbol in "ddsHTSeq<-DESeqDataSetFromHTseqCount(sampleTable=sampleTable, directory=directorym design"
+> ddsHTSeq<-DESeqDataSetFromHTseqCount(sampleTable=sampleTable, directory=directory design=~condition)
+Error: unexpected symbol in "ddsHTSeq<-DESeqDataSetFromHTseqCount(sampleTable=sampleTable, directory=directory design"
+> ddsHTSeq<-DESeqDataSetFromHTseqCount(sampleTable=sampleTable, directory=directory, design=~condition)
+Error: could not find function "DESeqDataSetFromHTseqCount"
+> ddsHTSeq<-DESeqDataSetFromHTSeqCount(sampleTable=sampleTable, directory=directory, design=~condition)
+Error in Ops.factor(a$V1, l[[1]]$V1) : 
+  level sets of factors are different
+In addition: Warning message:
+In is.na(e1) | is.na(e2) :
+  longer object length is not a multiple of shorter object length
+> sessionInfo()
+R version 3.1.1 (2014-07-10)
+Platform: x86_64-apple-darwin13.1.0 (64-bit)
+
+locale:
+[1] en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8
+
+attached base packages:
+[1] parallel  stats4    stats     graphics  grDevices utils     datasets  methods  
+[9] base     
+
+other attached packages:
+[1] DESeq2_1.6.3              RcppArmadillo_0.4.650.1.1 Rcpp_0.11.5              
+[4] GenomicRanges_1.18.4      GenomeInfoDb_1.2.5        IRanges_2.0.1            
+[7] S4Vectors_0.4.0           BiocGenerics_0.12.1      
+
+loaded via a namespace (and not attached):
+ [1] acepack_1.3-3.3      annotate_1.44.0      AnnotationDbi_1.28.2 base64enc_0.1-2     
+ [5] BatchJobs_1.6        BBmisc_1.9           Biobase_2.26.0       BiocParallel_1.0.3  
+ [9] brew_1.0-6           checkmate_1.5.2      cluster_2.0.1        codetools_0.2-11    
+[13] colorspace_1.2-6     DBI_0.3.1            digest_0.6.8         fail_1.2            
+[17] foreach_1.4.2        foreign_0.8-63       Formula_1.2-1        genefilter_1.48.1   
+[21] geneplotter_1.44.0   ggplot2_1.0.1        grid_3.1.1           gtable_0.1.2        
+[25] Hmisc_3.15-0         iterators_1.0.7      lattice_0.20-31      latticeExtra_0.6-26 
+[29] locfit_1.5-9.1       MASS_7.3-40          munsell_0.4.2        nnet_7.3-9          
+[33] plyr_1.8.1           proto_0.3-10         RColorBrewer_1.1-2   reshape2_1.4.1      
+[37] rpart_4.1-9          RSQLite_1.0.0        scales_0.2.4         sendmailR_1.2-1     
+[41] splines_3.1.1        stringr_0.6.2        survival_2.38-1      tools_3.1.1         
+[45] XML_3.98-1.1         xtable_1.7-4         XVector_0.6.0       
+> ddsHTSeq<-DESeqDataSetFromHTSeqCount(sampleTable=sampleTable, directory=directory, design=~condition)
+Error in Ops.factor(a$V1, l[[1]]$V1) : 
+  level sets of factors are different
+In addition: Warning message:
+In is.na(e1) | is.na(e2) :
+  longer object length is not a multiple of shorter object length
+> sampleFiles <- c("c",list.files(directory)
++ d
+Error: unexpected symbol in:
+"sampleFiles <- c("c",list.files(directory)
+d"
+> sampleFiles <- c("chimp",list.files(directory)
++ c
+Error: unexpected symbol in:
+"sampleFiles <- c("chimp",list.files(directory)
+c"
+> sampleFiles <- grep("chimp",list.files(directory),value=TRUE)
+> sampleFiles
+[1] "chimpM1_readcounts_out" "chimpM2_readcounts_out" "chimpM3_readcounts_out"
+[4] "chimpP1_readcounts_out" "chimpP2_readcounts_out" "chimpP3_readcounts_out"
+> sampleCondition <- ("Muscle", "Muscle", "Muscle", "Prefrontal_Cortex", "Prefrontal_Cortex", "Prefrontal_Cortex")
+Error: unexpected ',' in "sampleCondition <- ("Muscle","
+> sampleCondition <- c("Muscle", "Muscle", "Muscle", "Prefrontal_Cortex", "Prefrontal_Cortex", "Prefrontal_Cortex")
+> sampleTable <- data.frame(sampleName=sampleFiles, fileName=sampleFiles, condition=sampleCondition)
+> sampleTable
+              sampleName               fileName         condition
+1 chimpM1_readcounts_out chimpM1_readcounts_out            Muscle
+2 chimpM2_readcounts_out chimpM2_readcounts_out            Muscle
+3 chimpM3_readcounts_out chimpM3_readcounts_out            Muscle
+4 chimpP1_readcounts_out chimpP1_readcounts_out Prefrontal_Cortex
+5 chimpP2_readcounts_out chimpP2_readcounts_out Prefrontal_Cortex
+6 chimpP3_readcounts_out chimpP3_readcounts_out Prefrontal_Cortex
+> ddsHTSeq<-DESeqDataSetFromHTSeqCount(sampleTable=sampleTable, directory=directory, design=~condition)
+> ddsHTSeq
+class: DESeqDataSet 
+dim: 28012 6 
+exptData(0):
+assays(1): counts
+rownames(28012): ENSPTRG00000000001 ENSPTRG00000000008 ... ENSPTRG00000042660
+  ENSPTRG00000042661
+rowData metadata column names(0):
+colnames(6): chimpM1_readcounts_out chimpM2_readcounts_out ...
+  chimpP2_readcounts_out chimpP3_readcounts_out
+colData names(1): condition
+> colData(ddsHTSeq)$condition<-factor(colData(ddsHTSeq)$condition, levels=c("Muscle", "Prefrontal Cortex"))
+> dds <- DESeq(ddsHTSeq)
+estimating size factors
+Error in validObject(object) : 
+  invalid class “DESeqDataSet” object: factors in design formula must have samples for each level.
+  this error can arise when subsetting a DESeqDataSet, in which
+  all the samples for one or more levels of a factor in the design were removed.
+  if this was intentional, use droplevels() to remove these levels, e.g.:
+
+  dds$condition <- droplevels(dds$condition)
+> dds <- DESeq(ddsHTSeq)
+estimating size factors
+Error in validObject(object) : 
+  invalid class “DESeqDataSet” object: factors in design formula must have samples for each level.
+  this error can arise when subsetting a DESeqDataSet, in which
+  all the samples for one or more levels of a factor in the design were removed.
+  if this was intentional, use droplevels() to remove these levels, e.g.:
+
+  dds$condition <- droplevels(dds$condition)
+> colData(ddsHTSeq)$condition<-factor(colData(ddsHTSeq)$condition, levels=c("Muscle", "Prefrontal Cortex"))
+> dds <- DESeq(ddsHTSeq)
+estimating size factors
+Error in validObject(object) : 
+  invalid class “DESeqDataSet” object: factors in design formula must have samples for each level.
+  this error can arise when subsetting a DESeqDataSet, in which
+  all the samples for one or more levels of a factor in the design were removed.
+  if this was intentional, use droplevels() to remove these levels, e.g.:
+
+  dds$condition <- droplevels(dds$condition)
+> res<-results(dds)
+Error in "results" %in% mcols(mcols(object))$type : 
+  error in evaluating the argument 'table' in selecting a method for function '%in%': Error in mcols(mcols(object)) : 
+  error in evaluating the argument 'x' in selecting a method for function 'mcols': Error in mcols(object) : 
+  error in evaluating the argument 'x' in selecting a method for function 'mcols': Error: object 'dds' not found
+> dds <- DESeq(ddsHTSeq)
+estimating size factors
+Error in validObject(object) : 
+  invalid class “DESeqDataSet” object: factors in design formula must have samples for each level.
+  this error can arise when subsetting a DESeqDataSet, in which
+  all the samples for one or more levels of a factor in the design were removed.
+  if this was intentional, use droplevels() to remove these levels, e.g.:
+
+  dds$condition <- droplevels(dds$condition)
+> ddsHTSeq<-DESeqDataSetFromHTSeqCount(sampleTable=sampleTable, directory=directory, design=~condition)
+> dds <- DESeq(ddsHTSeq)
+estimating size factors
+estimating dispersions
+gene-wise dispersion estimates
+mean-dispersion relationship
+final dispersion estimates
+fitting model and testing
+> res<-results(dds)
+> res<-res[order(res$padj),]
+> head(res)
+log2 fold change (MAP): condition Prefrontal_Cortex vs Muscle 
+Wald test p-value: condition Prefrontal_Cortex vs Muscle 
+DataFrame with 6 rows and 6 columns
+                     baseMean log2FoldChange     lfcSE      stat        pvalue
+                    <numeric>      <numeric> <numeric> <numeric>     <numeric>
+ENSPTRG00000012691 132275.756     -12.375921 0.2952210 -41.92087  0.000000e+00
+ENSPTRG00000024321  22031.525      -9.537311 0.2671073 -35.70592 3.199378e-279
+ENSPTRG00000010931  13618.882      -7.016659 0.2162276 -32.45034 5.357453e-231
+ENSPTRG00000004681   8103.647      -9.315779 0.3018913 -30.85806 4.367524e-209
+ENSPTRG00000002086 142195.977     -15.431517 0.5118309 -30.14964 1.084269e-199
+ENSPTRG00000012955  47403.557     -13.232612 0.4407023 -30.02619 4.467563e-198
+                            padj
+                       <numeric>
+ENSPTRG00000012691  0.000000e+00
+ENSPTRG00000024321 2.460802e-275
+ENSPTRG00000010931 2.747124e-227
+ENSPTRG00000004681 1.679641e-205
+ENSPTRG00000002086 3.335861e-196
+ENSPTRG00000012955 1.145409e-194
+> plotMA(dds,ylim=c(-2,2),main="Differential Expressed Genes")
+> plotMA(dds,ylim=c(-2,2),main="Differential Expressed Genes")
+> colData(ddsHTSeq)$condition<-factor(colData(ddsHTSeq)$condition, levels=c("Muscle","Prefrontal Cortex"))
+> dds <- DESeq(ddsHTSeq)
+estimating size factors
+Error in validObject(object) : 
+  invalid class “DESeqDataSet” object: factors in design formula must have samples for each level.
+  this error can arise when subsetting a DESeqDataSet, in which
+  all the samples for one or more levels of a factor in the design were removed.
+  if this was intentional, use droplevels() to remove these levels, e.g.:
+
+  dds$condition <- droplevels(dds$condition)
+> colData(ddsHTSeq)$condition<-factor(colData(ddsHTSeq)$condition, levels=c("Muscle","Prefrontal_Cortex"))
+> dds <- DESeq(ddsHTSeq)
+estimating size factors
+Error in validObject(object) : 
+  invalid class “DESeqDataSet” object: factors in design formula must have samples for each level.
+  this error can arise when subsetting a DESeqDataSet, in which
+  all the samples for one or more levels of a factor in the design were removed.
+  if this was intentional, use droplevels() to remove these levels, e.g.:
+
+  dds$condition <- droplevels(dds$condition)
+> ddsHTSeq
+class: DESeqDataSet 
+dim: 28012 6 
+exptData(0):
+assays(1): counts
+rownames(28012): ENSPTRG00000000001 ENSPTRG00000000008 ... ENSPTRG00000042660
+  ENSPTRG00000042661
+rowData metadata column names(0):
+colnames(6): chimpM1_readcounts_out chimpM2_readcounts_out ...
+  chimpP2_readcounts_out chimpP3_readcounts_out
+colData names(1): condition
+> sampleTable
+              sampleName               fileName         condition
+1 chimpM1_readcounts_out chimpM1_readcounts_out            Muscle
+2 chimpM2_readcounts_out chimpM2_readcounts_out            Muscle
+3 chimpM3_readcounts_out chimpM3_readcounts_out            Muscle
+4 chimpP1_readcounts_out chimpP1_readcounts_out Prefrontal_Cortex
+5 chimpP2_readcounts_out chimpP2_readcounts_out Prefrontal_Cortex
+6 chimpP3_readcounts_out chimpP3_readcounts_out Prefrontal_Cortex
+> colData(ddsHTSeq)$condition<-factor(colData(ddsHTSeq)$condition, levels=c("Prefrontal_Cortex","Muscle"))
+> colData
+standardGeneric for "colData" defined from package "GenomicRanges"
+
+function (x, ...) 
+standardGeneric("colData")
+<environment: 0x7f9577f55320>
+Methods may be defined for arguments: x
+Use  showMethods("colData")  for currently available ones.
+> ddsHTSeq
+class: DESeqDataSet 
+dim: 28012 6 
+exptData(0):
+assays(1): counts
+rownames(28012): ENSPTRG00000000001 ENSPTRG00000000008 ... ENSPTRG00000042660
+  ENSPTRG00000042661
+rowData metadata column names(0):
+colnames(6): chimpM1_readcounts_out chimpM2_readcounts_out ...
+  chimpP2_readcounts_out chimpP3_readcounts_out
+colData names(1): condition
+> colData(ddsHTSeq)$condition<-factor(colData(ddsHTSeq)$condition, levels=c("Prefrontal_Cortex","Muscle"))
+> dds <- DESeq(ddsHTSeq)
+estimating size factors
+Error in validObject(object) : 
+  invalid class “DESeqDataSet” object: factors in design formula must have samples for each level.
+  this error can arise when subsetting a DESeqDataSet, in which
+  all the samples for one or more levels of a factor in the design were removed.
+  if this was intentional, use droplevels() to remove these levels, e.g.:
+
+  dds$condition <- droplevels(dds$condition)
+> colData(ddsHTSeq)$condition<-factor(colData(ddsHTSeq)$condition, levels=c("Prefrontal_Cortex"))
+> dds <- DESeq(ddsHTSeq)
+estimating size factors
+Error in validObject(object) : 
+  invalid class “DESeqDataSet” object: factors in design formula must have samples for each level.
+  this error can arise when subsetting a DESeqDataSet, in which
+  all the samples for one or more levels of a factor in the design were removed.
+  if this was intentional, use droplevels() to remove these levels, e.g.:
+
+  dds$condition <- droplevels(dds$condition)
+> colData(ddsHTSeq)$condition<-factor(colData(ddsHTSeq)$condition, levels=c("Prefrontal_Cortex", "Prefrontal_Cortex", "Prefrontal_Cortex", "Muscle", "Muscle", "Muscle"))
+Warning message:
+In `levels<-`(`*tmp*`, value = if (nl == nL) as.character(labels) else paste0(labels,  :
+  duplicated levels in factors are deprecated
+> colData(ddsHTSeq)$condition<-factor(colData(ddsHTSeq)$condition, levels=c("Prefrontal_Cortex", "Muscle"))
+> dds <- DESeq(ddsHTSeq)
+estimating size factors
+Error in validObject(object) : 
+  invalid class “DESeqDataSet” object: factors in design formula must have samples for each level.
+  this error can arise when subsetting a DESeqDataSet, in which
+  all the samples for one or more levels of a factor in the design were removed.
+  if this was intentional, use droplevels() to remove these levels, e.g.:
+
+  dds$condition <- droplevels(dds$condition)
+> sampleTable
+              sampleName               fileName         condition
+1 chimpM1_readcounts_out chimpM1_readcounts_out            Muscle
+2 chimpM2_readcounts_out chimpM2_readcounts_out            Muscle
+3 chimpM3_readcounts_out chimpM3_readcounts_out            Muscle
+4 chimpP1_readcounts_out chimpP1_readcounts_out Prefrontal_Cortex
+5 chimpP2_readcounts_out chimpP2_readcounts_out Prefrontal_Cortex
+6 chimpP3_readcounts_out chimpP3_readcounts_out Prefrontal_Cortex
+> colData(ddsHTSeq)$condition<-factor(colData(ddsHTSeq)$condition, levels=c("Muscle", "Prefrontal_Cortex"))
+> dds <- DESeq(ddsHTSeq)
+estimating size factors
+Error in validObject(object) : 
+  invalid class “DESeqDataSet” object: factors in design formula must have samples for each level.
+  this error can arise when subsetting a DESeqDataSet, in which
+  all the samples for one or more levels of a factor in the design were removed.
+  if this was intentional, use droplevels() to remove these levels, e.g.:
+
+  dds$condition <- droplevels(dds$condition)
+> dds <- DESeq(ddsHTSeq)
+estimating size factors
+Error in validObject(object) : 
+  invalid class “DESeqDataSet” object: factors in design formula must have samples for each level.
+  this error can arise when subsetting a DESeqDataSet, in which
+  all the samples for one or more levels of a factor in the design were removed.
+  if this was intentional, use droplevels() to remove these levels, e.g.:
+
+  dds$condition <- droplevels(dds$condition)
+> dds <- DESeq(ddsHTSeq)
+estimating size factors
+Error in validObject(object) : 
+  invalid class “DESeqDataSet” object: factors in design formula must have samples for each level.
+  this error can arise when subsetting a DESeqDataSet, in which
+  all the samples for one or more levels of a factor in the design were removed.
+  if this was intentional, use droplevels() to remove these levels, e.g.:
+
+  dds$condition <- droplevels(dds$condition)
+> colData(ddsHTSeq)$condition<-factor(colData(ddsHTSeq)$condition, levels=c("Muscle", "Prefrontal_Cortex", "Muscle"))
+Warning message:
+In `levels<-`(`*tmp*`, value = if (nl == nL) as.character(labels) else paste0(labels,  :
+  duplicated levels in factors are deprecated
+> colData(ddsHTSeq)$condition<-factor(colData(ddsHTSeq)$condition, levels=c("Muscle", "Prefrontal_Cortex", "Muscle", "Prefrontal_Cortex", ))
+Error in c("Muscle", "Prefrontal_Cortex", "Muscle", "Prefrontal_Cortex",  : 
+  argument 5 is empty
+> colData(ddsHTSeq)$condition<-factor(colData(ddsHTSeq)$condition, levels=c("Muscle", "Prefrontal_Cortex", "Muscle", "Prefrontal_Cortex", "Muscle", "Prefrontal_Cortex"))
+Warning message:
+In `levels<-`(`*tmp*`, value = if (nl == nL) as.character(labels) else paste0(labels,  :
+  duplicated levels in factors are deprecated
+> colData(ddsHTSeq)$condition<-factor(colData(ddsHTSeq)$condition, levels=c("Muscle", "Prefrontal_Cortex", "Muscle", "Prefrontal_Cortex", ))
+Error in c("Muscle", "Prefrontal_Cortex", "Muscle", "Prefrontal_Cortex",  : 
+  argument 5 is empty
+> dds <- DESeq(ddsHTSeq)
+estimating size factors
+Error in validObject(object) : 
+  invalid class “DESeqDataSet” object: factors in design formula must have samples for each level.
+  this error can arise when subsetting a DESeqDataSet, in which
+  all the samples for one or more levels of a factor in the design were removed.
+  if this was intentional, use droplevels() to remove these levels, e.g.:
+
+  dds$condition <- droplevels(dds$condition)
+In addition: Warning message:
+In `levels<-`(`*tmp*`, value = if (nl == nL) as.character(labels) else paste0(labels,  :
+  duplicated levels in factors are deprecated
+> colData(ddsHTSeq)$condition<-factor(colData(ddsHTSeq)$condition, levels=c("Muscle", "Prefrontal_Cortex", "Muscle"))
+Warning message:
+In `levels<-`(`*tmp*`, value = if (nl == nL) as.character(labels) else paste0(labels,  :
+  duplicated levels in factors are deprecated
+> colData(ddsHTSeq)$condition<-factor(colData(ddsHTSeq)$condition, levels=c("Muscle", "Prefrontal_Cortex"))
+> dds <- DESeq(ddsHTSeq)
+estimating size factors
+Error in validObject(object) : 
+  invalid class “DESeqDataSet” object: factors in design formula must have samples for each level.
+  this error can arise when subsetting a DESeqDataSet, in which
+  all the samples for one or more levels of a factor in the design were removed.
+  if this was intentional, use droplevels() to remove these levels, e.g.:
+
+  dds$condition <- droplevels(dds$condition)
+> dds$condition <- droplevels(dds$conditon)
+Error in UseMethod("droplevels") : 
+  no applicable method for 'droplevels' applied to an object of class "NULL"
+> dds$condition
+[1] Muscle            Muscle            Muscle            Prefrontal_Cortex
+[5] Prefrontal_Cortex Prefrontal_Cortex
+Levels: Muscle Prefrontal_Cortex
+> dds <- DESeq(ddsHTSeq)
+estimating size factors
+Error in validObject(object) : 
+  invalid class “DESeqDataSet” object: factors in design formula must have samples for each level.
+  this error can arise when subsetting a DESeqDataSet, in which
+  all the samples for one or more levels of a factor in the design were removed.
+  if this was intentional, use droplevels() to remove these levels, e.g.:
+
+  dds$condition <- droplevels(dds$condition)
+> dds
+class: DESeqDataSet 
+dim: 28012 6 
+exptData(0):
+assays(3): counts mu cooks
+rownames(28012): ENSPTRG00000000001 ENSPTRG00000000008 ... ENSPTRG00000042660
+  ENSPTRG00000042661
+rowData metadata column names(27): baseMean baseVar ... deviance maxCooks
+colnames(6): chimpM1_readcounts_out chimpM2_readcounts_out ...
+  chimpP2_readcounts_out chimpP3_readcounts_out
+colData names(2): condition sizeFactor
+> plotMA(dds,ylim=c(-2,2),main="Differential Expressed Genes")
+> plotMA(dds,pvalCutoff=.05,ylim=c(-2,2),main="Differential Expressed Genes")
+Error in results(object, ...) : unused argument (pvalCutoff = 0.05)
+> plotMA(dds,pvalCutoff=.05,ylim=c(-2,2),main="Differential Expressed Genes")
+Error in results(object, ...) : unused argument (pvalCutoff = 0.05)
+> dds
+class: DESeqDataSet 
+dim: 28012 6 
+exptData(0):
+assays(3): counts mu cooks
+rownames(28012): ENSPTRG00000000001 ENSPTRG00000000008 ... ENSPTRG00000042660
+  ENSPTRG00000042661
+rowData metadata column names(27): baseMean baseVar ... deviance maxCooks
+colnames(6): chimpM1_readcounts_out chimpM2_readcounts_out ...
+  chimpP2_readcounts_out chimpP3_readcounts_out
+colData names(2): condition sizeFactor
+> colData(ddsHTSeq)$condition<-factor(colData(ddsHTSeq)$condition, levels=c("Muscle", "Prefrontal_Cortex"))
+> ddsHTSeq
+class: DESeqDataSet 
+dim: 28012 6 
+exptData(0):
+assays(1): counts
+rownames(28012): ENSPTRG00000000001 ENSPTRG00000000008 ... ENSPTRG00000042660
+  ENSPTRG00000042661
+rowData metadata column names(0):
+colnames(6): chimpM1_readcounts_out chimpM2_readcounts_out ...
+  chimpP2_readcounts_out chimpP3_readcounts_out
+colData names(1): condition
+> colData
+standardGeneric for "colData" defined from package "GenomicRanges"
+
+function (x, ...) 
+standardGeneric("colData")
+<environment: 0x7f9577f55320>
+Methods may be defined for arguments: x
+Use  showMethods("colData")  for currently available ones.
+> condition
+Error: object 'condition' not found
+> dds
+class: DESeqDataSet 
+dim: 28012 6 
+exptData(0):
+assays(3): counts mu cooks
+rownames(28012): ENSPTRG00000000001 ENSPTRG00000000008 ... ENSPTRG00000042660
+  ENSPTRG00000042661
+rowData metadata column names(27): baseMean baseVar ... deviance maxCooks
+colnames(6): chimpM1_readcounts_out chimpM2_readcounts_out ...
+  chimpP2_readcounts_out chimpP3_readcounts_out
+colData names(2): condition sizeFactor
+> ddsHTSeq
+class: DESeqDataSet 
+dim: 28012 6 
+exptData(0):
+assays(1): counts
+rownames(28012): ENSPTRG00000000001 ENSPTRG00000000008 ... ENSPTRG00000042660
+  ENSPTRG00000042661
+rowData metadata column names(0):
+colnames(6): chimpM1_readcounts_out chimpM2_readcounts_out ...
+  chimpP2_readcounts_out chimpP3_readcounts_out
+colData names(1): condition
+> colData(ddsHTSeq)$condition<-factor(colData(ddsHTSeq)$condition, levels=c("Muscle", "Prefrontal_Cortex"))
+> dds <- DESeq(ddsHTSeq)
+estimating size factors
+Error in validObject(object) : 
+  invalid class “DESeqDataSet” object: factors in design formula must have samples for each level.
+  this error can arise when subsetting a DESeqDataSet, in which
+  all the samples for one or more levels of a factor in the design were removed.
+  if this was intentional, use droplevels() to remove these levels, e.g.:
+
+  dds$condition <- droplevels(dds$condition)
+> dds$condition <-relevel(dds$condition, "Prefontal_Cortex")
+Error in relevel.factor(dds$condition, "Prefontal_Cortex") : 
+  'ref' must be an existing level
+> colData
+standardGeneric for "colData" defined from package "GenomicRanges"
+
+function (x, ...) 
+standardGeneric("colData")
+<environment: 0x7f9577f55320>
+Methods may be defined for arguments: x
+Use  showMethods("colData")  for currently available ones.
+> ddsHTSeq
+class: DESeqDataSet 
+dim: 28012 6 
+exptData(0):
+assays(1): counts
+rownames(28012): ENSPTRG00000000001 ENSPTRG00000000008 ... ENSPTRG00000042660
+  ENSPTRG00000042661
+rowData metadata column names(0):
+colnames(6): chimpM1_readcounts_out chimpM2_readcounts_out ...
+  chimpP2_readcounts_out chimpP3_readcounts_out
+colData names(1): condition
+> colData(ddsHTSeq)$condition<-factor(colData(ddsHTSeq)$condition, levels=c("Muscle", "Prefrontal_Cortex"))
+> ddsHTSeq
+class: DESeqDataSet 
+dim: 28012 6 
+exptData(0):
+assays(1): counts
+rownames(28012): ENSPTRG00000000001 ENSPTRG00000000008 ... ENSPTRG00000042660
+  ENSPTRG00000042661
+rowData metadata column names(0):
+colnames(6): chimpM1_readcounts_out chimpM2_readcounts_out ...
+  chimpP2_readcounts_out chimpP3_readcounts_out
+colData names(1): condition
+> res
+log2 fold change (MAP): condition Prefrontal_Cortex vs Muscle 
+Wald test p-value: condition Prefrontal_Cortex vs Muscle 
+DataFrame with 28012 rows and 6 columns
+                     baseMean log2FoldChange     lfcSE      stat        pvalue
+                    <numeric>      <numeric> <numeric> <numeric>     <numeric>
+ENSPTRG00000012691 132275.756     -12.375921 0.2952210 -41.92087  0.000000e+00
+ENSPTRG00000024321  22031.525      -9.537311 0.2671073 -35.70592 3.199378e-279
+ENSPTRG00000010931  13618.882      -7.016659 0.2162276 -32.45034 5.357453e-231
+ENSPTRG00000004681   8103.647      -9.315779 0.3018913 -30.85806 4.367524e-209
+ENSPTRG00000002086 142195.977     -15.431517 0.5118309 -30.14964 1.084269e-199
+...                       ...            ...       ...       ...           ...
+ENSPTRG00000042657          0             NA        NA        NA            NA
+ENSPTRG00000042658          0             NA        NA        NA            NA
+ENSPTRG00000042659          0             NA        NA        NA            NA
+ENSPTRG00000042660          0             NA        NA        NA            NA
+ENSPTRG00000042661          0             NA        NA        NA            NA
+                            padj
+                       <numeric>
+ENSPTRG00000012691  0.000000e+00
+ENSPTRG00000024321 2.460802e-275
+ENSPTRG00000010931 2.747124e-227
+ENSPTRG00000004681 1.679641e-205
+ENSPTRG00000002086 3.335861e-196
+...                          ...
+ENSPTRG00000042657            NA
+ENSPTRG00000042658            NA
+ENSPTRG00000042659            NA
+ENSPTRG00000042660            NA
+ENSPTRG00000042661            NA
+> plotMA(dds,ylim=c(-2,2),main="Differential Expressed Genes")
+> colData(ddsHTSeq)$condition<-factor(colData(ddsHTSeq)$condition, levels=c("Muscle", "Prefrontal_Cortex"))
+> colData(ddsHTSeq)$condition<-factor(colData(ddsHTSeq)$condition, levels=c("Muscle", "Prefrontal_Cortex"))
+> dds <- DESeq(ddsHTSeq)
+estimating size factors
+Error in validObject(object) : 
+  invalid class “DESeqDataSet” object: factors in design formula must have samples for each level.
+  this error can arise when subsetting a DESeqDataSet, in which
+  all the samples for one or more levels of a factor in the design were removed.
+  if this was intentional, use droplevels() to remove these levels, e.g.:
+
+  dds$condition <- droplevels(dds$condition)
+> res<-results(dds)
+> res<-res[order(res$padj),]
+> plotMA(dds,ylim=c(-2,2),main="Differential Expressed Genes")
+> res
+log2 fold change (MAP): condition Prefrontal_Cortex vs Muscle 
+Wald test p-value: condition Prefrontal_Cortex vs Muscle 
+DataFrame with 28012 rows and 6 columns
+                     baseMean log2FoldChange     lfcSE      stat        pvalue
+                    <numeric>      <numeric> <numeric> <numeric>     <numeric>
+ENSPTRG00000012691 132275.756     -12.375921 0.2952210 -41.92087  0.000000e+00
+ENSPTRG00000024321  22031.525      -9.537311 0.2671073 -35.70592 3.199378e-279
+ENSPTRG00000010931  13618.882      -7.016659 0.2162276 -32.45034 5.357453e-231
+ENSPTRG00000004681   8103.647      -9.315779 0.3018913 -30.85806 4.367524e-209
+ENSPTRG00000002086 142195.977     -15.431517 0.5118309 -30.14964 1.084269e-199
+...                       ...            ...       ...       ...           ...
+ENSPTRG00000042657          0             NA        NA        NA            NA
+ENSPTRG00000042658          0             NA        NA        NA            NA
+ENSPTRG00000042659          0             NA        NA        NA            NA
+ENSPTRG00000042660          0             NA        NA        NA            NA
+ENSPTRG00000042661          0             NA        NA        NA            NA
+                            padj
+                       <numeric>
+ENSPTRG00000012691  0.000000e+00
+ENSPTRG00000024321 2.460802e-275
+ENSPTRG00000010931 2.747124e-227
+ENSPTRG00000004681 1.679641e-205
+ENSPTRG00000002086 3.335861e-196
+...                          ...
+ENSPTRG00000042657            NA
+ENSPTRG00000042658            NA
+ENSPTRG00000042659            NA
+ENSPTRG00000042660            NA
+ENSPTRG00000042661            NA
+> summary(res)
+
+out of 18245 with nonzero total read count
+adjusted p-value < 0.1
+LFC > 0 (up)     : 4965, 27% 
+LFC < 0 (down)   : 4234, 23% 
+outliers [1]     : 203, 1.1% 
+low counts [2]   : 2659, 15% 
+(mean count < 0.7)
+[1] see 'cooksCutoff' argument of ?results
+[2] see 'independentFiltering' argument of ?results
+
+> plotMA(res,ylim=c(-2,2),main="Differential Expressed Genes")
+> plotMA(res,ylim=c(-2,2),main="Differential Expressed Genes")
+> plotMA(dds,ylim=c(-2,2),main="Differential Expressed Genes")
+> plotMA(dds,main="Differential Expressed Genes")
+> plotMA(dds,ylim=c(-2,2),main="Differential Expressed Genes")
+> plotPCA(dds, intgroup=c("condition", "type")
++ d
+Error: unexpected symbol in:
+"plotPCA(dds, intgroup=c("condition", "type")
+d"
+> plotPCA(dds, intgroup=c("condition", "type"))
+Error in plotPCA(dds, intgroup = c("condition", "type")) : 
+  the argument 'intgroup' should specify columns of colData(dds)
+> plotPCA(dds, intgroup=c("Muscle", "Prefrontal_Cortex"))
+Error in plotPCA(dds, intgroup = c("Muscle", "Prefrontal_Cortex")) : 
+  the argument 'intgroup' should specify columns of colData(dds)
+> colData(dds)
+DataFrame with 6 rows and 2 columns
+                               condition sizeFactor
+                                <factor>  <numeric>
+chimpM1_readcounts_out            Muscle  1.1541781
+chimpM2_readcounts_out            Muscle  1.2784418
+chimpM3_readcounts_out            Muscle  0.9258700
+chimpP1_readcounts_out Prefrontal_Cortex  0.7748091
+chimpP2_readcounts_out Prefrontal_Cortex  0.7708940
+chimpP3_readcounts_out Prefrontal_Cortex  1.2765958
+> ddsHTSeq
+class: DESeqDataSet 
+dim: 28012 6 
+exptData(0):
+assays(1): counts
+rownames(28012): ENSPTRG00000000001 ENSPTRG00000000008 ... ENSPTRG00000042660
+  ENSPTRG00000042661
+rowData metadata column names(0):
+colnames(6): chimpM1_readcounts_out chimpM2_readcounts_out ...
+  chimpP2_readcounts_out chimpP3_readcounts_out
+colData names(1): condition
+> ddsHTSeq<-DESeqDataSetFromHTSeqCount(sampleTable=sampleTable, directory=directory, design=~condition)
+> colData(ddsHTSeq)$condition<-factor(colData(ddsHTSeq)$condition, levels=c("Muscle", "Prefrontal_Cortex"))
+> dds <- DESeq(ddsHTSeq, colData=colData)
+Error in DESeq(ddsHTSeq, colData = colData) : 
+  unused argument (colData = colData)
+> dds <- DESeq(ddsHTSeq)
+estimating size factors
+estimating dispersions
+gene-wise dispersion estimates
+mean-dispersion relationship
+final dispersion estimates
+fitting model and testing
+> res<-results(dds)
+> res<-res[order(res$padj),]
+> head(res)
+log2 fold change (MAP): condition Prefrontal_Cortex vs Muscle 
+Wald test p-value: condition Prefrontal_Cortex vs Muscle 
+DataFrame with 6 rows and 6 columns
+                     baseMean log2FoldChange     lfcSE      stat        pvalue
+                    <numeric>      <numeric> <numeric> <numeric>     <numeric>
+ENSPTRG00000012691 132275.756     -12.375921 0.2952210 -41.92087  0.000000e+00
+ENSPTRG00000024321  22031.525      -9.537311 0.2671073 -35.70592 3.199378e-279
+ENSPTRG00000010931  13618.882      -7.016659 0.2162276 -32.45034 5.357453e-231
+ENSPTRG00000004681   8103.647      -9.315779 0.3018913 -30.85806 4.367524e-209
+ENSPTRG00000002086 142195.977     -15.431517 0.5118309 -30.14964 1.084269e-199
+ENSPTRG00000012955  47403.557     -13.232612 0.4407023 -30.02619 4.467563e-198
+                            padj
+                       <numeric>
+ENSPTRG00000012691  0.000000e+00
+ENSPTRG00000024321 2.460802e-275
+ENSPTRG00000010931 2.747124e-227
+ENSPTRG00000004681 1.679641e-205
+ENSPTRG00000002086 3.335861e-196
+ENSPTRG00000012955 1.145409e-194
+> plotMA(dds,ylim=c(-2,2),main="Differntially Expressed Genes")
+> plotMA(dds,ylim=c(-2,2),main="Differntially Expressed Genes")
+> colData(ddsHTSeq)$condition<-factor(colData(ddsHTSeq)$condition, levels=c("Muscle", "Prefrontal_Cortex"))
+> dds <- DESeq(ddsHTSeq)
+estimating size factors
+estimating dispersions
+gene-wise dispersion estimates
+mean-dispersion relationship
+final dispersion estimates
+fitting model and testing
+> colData(ddsHTSeq)$condition<-factor(colData(ddsHTSeq)$condition, levels=c("Muscle", "Prefrontal_Cortex"))
+> colData(ddsHTSeq)$condition<-factor(colData(ddsHTSeq)$condition, levels=c("Muscle", "Prefrontal_Cortex"))
+> dds <- DESeq(ddsHTSeq)
+estimating size factors
+estimating dispersions
+gene-wise dispersion estimates
+mean-dispersion relationship
+final dispersion estimates
+fitting model and testing
+> plotMA(dds,ylim=c(-2,2),main="Differntially Expressed Genes", pvalCutoff=0.05)
+Error in results(object, ...) : unused argument (pvalCutoff = 0.05)
+> plotMA(dds,ylim=c(-2,2),main="Differntially Expressed Genes", pvalCutoff=0.1)
+Error in results(object, ...) : unused argument (pvalCutoff = 0.1)
+> plotMA(dds,ylim=c(-2,2),main="Differntially Expressed Genes", pvalCutoff=0.6)
+Error in results(object, ...) : unused argument (pvalCutoff = 0.6)
+> plotMA(dds,ylim=c(-2,2),main="Differntially Expressed Genes", pvalCutoff)
+Error in ifelse(is.na(object$padj), FALSE, object$padj < alpha) : 
+  error in evaluating the argument 'no' in selecting a method for function 'ifelse': Error: object 'pvalCutoff' not found
+> ''
+[1] ""
+> plotMA(dds,ylim=c(-2,2),main="Differntially Expressed Genes")
+> plotMA(dds,ylim=c(-10,10),main="Differntially Expressed Genes")
+> dds
+class: DESeqDataSet 
+dim: 28012 6 
+exptData(0):
+assays(3): counts mu cooks
+rownames(28012): ENSPTRG00000000001 ENSPTRG00000000008 ... ENSPTRG00000042660
+  ENSPTRG00000042661
+rowData metadata column names(27): baseMean baseVar ... deviance maxCooks
+colnames(6): chimpM1_readcounts_out chimpM2_readcounts_out ...
+  chimpP2_readcounts_out chimpP3_readcounts_out
+colData names(2): condition sizeFactor
+> plotMA(res,ylim=c(-10,10),main="Differntially Expressed Genes")
+> plotMA(dds,ylim=c(-10,10),main="Differntially Expressed Genes")
+> plotMA(res,ylim=c(-10,10),main="Differntially Expressed Genes")
+> plotMA(dds,ylim=c(-10,10),main="Differntially Expressed Genes")
+> plotMA(res,ylim=c(-10,10),main="Differntially Expressed Genes")
+> plotMA(res,ylim=c(-9,9),main="Differntially Expressed Genes")
+> plotMA(res,ylim=c(-9,9),main="Differntially Expressed Genes", ylab=Log[2]~Fold~Change)
+> plotMA(res,ylim=c(-9,9),main="Differntially Expressed Genes: Muscle vs Prefrontal Cortex (Human)", ylab=Log[2]~Fold~Change)
+> plotMA(res,ylim=c(-9,9),main="Differntially Expressed Genes: Muscle vs Prefrontal Cortex (Human)", ylab=Log[2]~Fold~Change, xlab=Mean~Expression)
+> ddsHTSeq
+class: DESeqDataSet 
+dim: 28012 6 
+exptData(0):
+assays(1): counts
+rownames(28012): ENSPTRG00000000001 ENSPTRG00000000008 ... ENSPTRG00000042660
+  ENSPTRG00000042661
+rowData metadata column names(0):
+colnames(6): chimpM1_readcounts_out chimpM2_readcounts_out ...
+  chimpP2_readcounts_out chimpP3_readcounts_out
+colData names(1): condition
+> plotMA(res,ylim=c(-9,9),main="Differntially Expressed Genes: Muscle vs Prefrontal Cortex (Chimp)", ylab=Log[2]~Fold~Change, xlab=Mean~Expression)
+> dev.copy(png, "deseq2_MAPlot_chimp_mus_pre.png")
+quartz_off_screen 
+                3 
+> dev.off
+function (which = dev.cur()) 
+{
+    if (which == 1) 
+        stop("cannot shut down device 1 (the null device)")
+    .External(C_devoff, as.integer(which))
+    dev.cur()
+}
+<bytecode: 0x7f9574d40b90>
+<environment: namespace:grDevices>
+> dev.off()
+quartz 
+     2 
+> sampleFiles2 <- grep("human",list.files(directory)value=TRUE)
+Error: unexpected symbol in "sampleFiles2 <- grep("human",list.files(directory)value"
+> sampleFiles2 <- grep("human",list.files(directory)value=TRUE)
+Error: unexpected symbol in "sampleFiles2 <- grep("human",list.files(directory)value"
+> sampleFiles <- grep("human",list.files(directory)value=TRUE)
+Error: unexpected symbol in "sampleFiles <- grep("human",list.files(directory)value"
+> sampleFiles2 <- grep("human",list.files(directory)value=TRUE)
+Error: unexpected symbol in "sampleFiles2 <- grep("human",list.files(directory)value"
+> sampleFiles2 <- grep("human",list.files(directory)value=TRUE)
+Error: unexpected symbol in "sampleFiles2 <- grep("human",list.files(directory)value"
+> sampleFiles2 <- grep("human",list.files(directory),value=TRUE)
+> sampleFiles2
+[1] "humanM1_readcounts_out" "humanM2_readcounts_out" "humanM3_readcounts_out"
+[4] "humanP1_readcounts_out" "humanP2_readcounts_out" "humanP3_readcounts_out"
+> sampleCondition2 <- c("muscle", "muscle", "muscle", "prefrontal cortex", "prefrontal cortex", "prefrontal cortex")
+> sampleTable2 <- data.frame(sampleName=sampleFiles2, filename=sampleFiles2, condition=sampleCondition2)
+> sampleTable2
+              sampleName               filename         condition
+1 humanM1_readcounts_out humanM1_readcounts_out            muscle
+2 humanM2_readcounts_out humanM2_readcounts_out            muscle
+3 humanM3_readcounts_out humanM3_readcounts_out            muscle
+4 humanP1_readcounts_out humanP1_readcounts_out prefrontal cortex
+5 humanP2_readcounts_out humanP2_readcounts_out prefrontal cortex
+6 humanP3_readcounts_out humanP3_readcounts_out prefrontal cortex
+> ddsHTSeq2<-DESeqDataSetFromHTSeqCount(sampleTable=sampleTable2, directory=directory, design=~condition)
+> ddsHTSeq2
+class: DESeqDataSet 
+dim: 63659 6 
+exptData(0):
+assays(1): counts
+rownames(63659): ENSG00000000003 ENSG00000000005 ... ENSG00000273492
+  ENSG00000273493
+rowData metadata column names(0):
+colnames(6): humanM1_readcounts_out humanM2_readcounts_out ...
+  humanP2_readcounts_out humanP3_readcounts_out
+colData names(1): condition
+> colData(ddsHTSeq2)$condition<-factor(colData(ddsHTSeq2)$condition, levels=c("muscle","prefrontal cortex"))
+> dds2 <- DESeq(ddsHTSeq2)
+estimating size factors
+estimating dispersions
+gene-wise dispersion estimates
+mean-dispersion relationship
+final dispersion estimates
+fitting model and testing
+> res2 <- results(dds2)
+> res2 <- res2[order(res2$padj),]
+> head(res2)
+log2 fold change (MAP): condition prefrontal cortex vs muscle 
+Wald test p-value: condition prefrontal cortex vs muscle 
+DataFrame with 6 rows and 6 columns
+                 baseMean log2FoldChange     lfcSE      stat        pvalue          padj
+                <numeric>      <numeric> <numeric> <numeric>     <numeric>     <numeric>
+ENSG00000092054 95922.223     -14.291946 0.6543076 -21.84285 9.089642e-106 1.852651e-101
+ENSG00000104833  1478.849       7.677154 0.3718099  20.64806  1.016158e-94  1.035566e-90
+ENSG00000164879 19693.427     -12.979099 0.6312766 -20.56008  6.252640e-94  4.248044e-90
+ENSG00000020129  1076.831       5.270330 0.2587261  20.37031  3.067503e-92  1.563046e-88
+ENSG00000155657 78363.435     -10.907189 0.5380330 -20.27234  2.256625e-91  9.198908e-88
+ENSG00000196091 39721.336     -10.004726 0.5032164 -19.88156  5.877995e-88  1.996755e-84
+> plotMA(dds2,ylim=c(-9,9),main="Differntially Expressed Genes: Muscle vs Prefrontal Cortex (Human)", ylab=Log[2]~Fold~Change, xlab=Mean~Expression)
+Error in results(object, ...) : 
+  unused arguments (ylab = Log[2] ~ Fold ~ Change, xlab = Mean ~ Expression)
+> plotMA(dds2,ylim=c(-9,9),main="Differntially Expressed Genes: Muscle vs Prefrontal Cortex (Human)")
+> plotMA(res2,ylim=c(-9,9),main="Differntially Expressed Genes: Muscle vs Prefrontal Cortex (Human)")
+> plotMA(res2,ylim=c(-9,9),main="Differntially Expressed Genes: Muscle vs Prefrontal Cortex (Human)")
+> plotMA(res2,ylim=c(-9,9),main="Differntially Expressed Genes: Muscle vs Prefrontal Cortex (Human)",ylab=Log[2]~Fold~Change, xlab=Mean~Expression)
+> mcols(res.use.names=TRUE)
+Error in (function (classes, fdef, mtable)  : 
+  unable to find an inherited method for function ‘mcols’ for signature ‘"missing"’
+> mcols(res.use.names=TRUE)
+Error in (function (classes, fdef, mtable)  : 
+  unable to find an inherited method for function ‘mcols’ for signature ‘"missing"’
+2015-04-30 15:26:16.154 R[70756:23688464] Communications error: <OS_xpc_error: <error: 0x7fff76011b60> { count = 1, contents =
+	"XPCErrorDescription" => <string: 0x7fff76011fa8> { length = 22, contents = "Connection interrupted" }
+}>
+> res2 <- res2[order(res2$padj < 0.05),]
+> plotMA(res2,ylim=c(-9,9),main="Differntially Expressed Genes: Muscle vs Prefrontal Cortex (Human)",ylab=Log[2]~Fold~Change, xlab=Mean~Expression)
+> res2 <- res2[order(res2$padj < 0.01),]
+> plotMA(res2,ylim=c(-9,9),main="Differntially Expressed Genes: Muscle vs Prefrontal Cortex (Human)",ylab=Log[2]~Fold~Change, xlab=Mean~Expression)
+> plotMA(res2,ylim=c(-9,9),main="Differntially Expressed Genes: Muscle vs Prefrontal Cortex (Human)",ylab=Log[2]~Fold~Change, xlab=Mean~Expression)
+> res2 <- res2[order(res2$padj < 0.1),]
+> plotMA(res2,ylim=c(-9,9),main="Differntially Expressed Genes: Muscle vs Prefrontal Cortex (Human)",ylab=Log[2]~Fold~Change, xlab=Mean~Expression)
+> res2 <- res2[order(res2$padj < 0.05),]
+> plotMA(res2,ylim=c(-9,9),main="Differntially Expressed Genes: Muscle vs Prefrontal Cortex (Human)",ylab=Log[2]~Fold~Change, xlab=Mean~Expression)
+> plotMA(res2,ylim=c(-9,9),main="Differntially Expressed Genes: Muscle vs Prefrontal Cortex (Human)",ylab=Log[2]~Fold~Change, xlab=Mean~Expression)
+> res2 <- res2[order(res2$padj < 0.2),]
+> plotMA(res2,ylim=c(-9,9),main="Differntially Expressed Genes: Muscle vs Prefrontal Cortex (Human)",ylab=Log[2]~Fold~Change, xlab=Mean~Expression)
+> plotMA(res2,ylim=c(-9,9),main="Differntially Expressed Genes: Muscle vs Prefrontal Cortex (Human)",ylab=Log[2]~Fold~Change, xlab=Mean~Expression)
+> res2 <- res2[order(res2$padj < 0.01),]
+> plotMA(res2,ylim=c(-9,9),main="Differntially Expressed Genes: Muscle vs Prefrontal Cortex (Human)",ylab=Log[2]~Fold~Change, xlab=Mean~Expression)
+> plotMA(res2,ylim=c(-9,9),main="Differntially Expressed Genes: Muscle vs Prefrontal Cortex (Human)",ylab=Log[2]~Fold~Change, xlab=Mean~Expression)
+> res2 <- res2[order(res2$padj < 0.1),]
+> plotMA(res2,ylim=c(-9,9),main="Differntially Expressed Genes: Muscle vs Prefrontal Cortex (Human)",ylab=Log[2]~Fold~Change, xlab=Mean~Expression)
+> res2 <- res2[order(res2$padj < 0..05),]
+Error: unexpected numeric constant in "res2 <- res2[order(res2$padj < 0..05"
+> res2 <- res2[order(res2$padj < 0.05),]
+> plotMA(res2,ylim=c(-9,9),main="Differentially Expressed Genes: Muscle vs Prefrontal Cortex (Human)",ylab=Log[2]~Fold~Change, xlab=Mean~Expression)
+> res2 <- res2[order(res2$padj < 0.1),]
+> res2 <- res2[order(res2$padj < 0.1),]
+> plotMA(res2,ylim=c(-9,9),main="Differentially Expressed Genes: Muscle vs Prefrontal Cortex (Human)",ylab=Log[2]~Fold~Change, xlab=Mean~Expression)
+2015-05-01 13:50:03.601 R[70756:23911449] Communications error: <OS_xpc_error: <error: 0x7fff76011b60> { count = 1, contents =
+	"XPCErrorDescription" => <string: 0x7fff76011fa8> { length = 22, contents = "Connection interrupted" }
+}>
+> 

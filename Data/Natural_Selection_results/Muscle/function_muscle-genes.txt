@@ -1,0 +1,388 @@
+Gene	Gene description
+MYH1	Myosin, heavy chain 1, skeletal muscle, adult
+IDI2	Isopentenyl-diphosphate delta isomerase 2
+MYH4	Myosin, heavy chain 4, skeletal muscle
+MYBPC2	Myosin binding protein C, fast type
+LBX1	Ladybird homeobox 1
+SLC36A2	Solute carrier family 36 (proton/amino acid symporter), member 2
+ATP2A1	ATPase, Ca++ transporting, cardiac muscle, fast twitch 1
+MYH2	Myosin, heavy chain 2, skeletal muscle, adult
+NEB	Nebulin
+KCNA7	Potassium voltage-gated channel, shaker-related subfamily, member 7
+NMRK2	Nicotinamide riboside kinase 2
+MYLPF	Myosin light chain, phosphorylatable, fast skeletal muscle
+TNNT3	Troponin T type 3 (skeletal, fast)
+MYLK2	Myosin light chain kinase 2
+C8orf22	Chromosome 8 open reading frame 22
+AL158147.2	HCG2011465; Uncharacterized protein 
+TNNC2	Troponin C type 2 (fast)
+YIPF7	Yip1 domain family, member 7
+GBX1	Gastrulation brain homeobox 1
+CACNA1S	Calcium channel, voltage-dependent, L type, alpha 1S subunit
+DCD	Dermcidin
+C20orf166	Chromosome 20 open reading frame 166
+ANKRD23	Ankyrin repeat domain 23
+FBXO40	F-box protein 40
+FGF6	Fibroblast growth factor 6
+HRC	Histidine rich calcium binding protein
+JSRP1	Junctional sarcoplasmic reticulum protein 1
+PPP1R27	Protein phosphatase 1, regulatory subunit 27
+C10orf71	Chromosome 10 open reading frame 71
+CASQ1	Calsequestrin 1 (fast-twitch, skeletal muscle)
+ACTN2	Actinin, alpha 2
+CACNG1	Calcium channel, voltage-dependent, gamma subunit 1
+FSD2	Fibronectin type III and SPRY domain containing 2
+RP11-766F14.2	Protein LOC285556 
+SMTNL1	Smoothelin-like 1
+MYOZ1	Myozenin 1
+TNNI2	Troponin I type 2 (skeletal, fast)
+ASB12	Ankyrin repeat and SOCS box containing 12
+TTN	Titin
+CKMT2	Creatine kinase, mitochondrial 2 (sarcomeric)
+MYPN	Myopalladin
+PYGM	Phosphorylase, glycogen, muscle
+ART1	ADP-ribosyltransferase 1
+KLHL38	Kelch-like family member 38
+MYO18B	Myosin XVIIIB
+PFKFB1	6-phosphofructo-2-kinase/fructose-2,6-biphosphatase 1
+UCP3	Uncoupling protein 3 (mitochondrial, proton carrier)
+AL109927.1	HCG2032222; PRO2047; Uncharacterized protein 
+LRRC38	Leucine rich repeat containing 38
+RYR1	Ryanodine receptor 1 (skeletal)
+ADPRHL1	ADP-ribosylhydrolase like 1
+COX6A2	Cytochrome c oxidase subunit VIa polypeptide 2
+DUPD1	Dual specificity phosphatase and pro isomerase domain containing 1
+RPL3L	Ribosomal protein L3-like
+CLCN1	Chloride channel, voltage-sensitive 1
+FAM166B	Family with sequence similarity 166, member B
+FEM1A	Fem-1 homolog a (C. elegans)
+LRRC14B	Leucine rich repeat containing 14B
+PRKAG3	Protein kinase, AMP-activated, gamma 3 non-catalytic subunit
+ART3	ADP-ribosyltransferase 3
+DHRS7C	Dehydrogenase/reductase (SDR family) member 7C
+KLHL33	Kelch-like family member 33
+MYH7	Myosin, heavy chain 7, cardiac muscle, beta
+SMPX	Small muscle protein, X-linked
+TMOD4	Tropomodulin 4 (muscle)
+AC025262.1	Mesenchymal stem cell protein DSC96; Uncharacterized protein 
+CHRNG	Cholinergic receptor, nicotinic, gamma (muscle)
+FITM1	Fat storage-inducing transmembrane protein 1
+LMOD2	Leiomodin 2 (cardiac)
+STAC3	SH3 and cysteine rich domain 3
+CMYA5	Cardiomyopathy associated 5
+JPH1	Junctophilin 1
+MYOT	Myotilin
+SRL	Sarcalumenin
+TRIM63	Tripartite motif containing 63, E3 ubiquitin protein ligase
+UNC45B	Unc-45 homolog B (C. elegans)
+GADL1	Glutamate decarboxylase-like 1
+LRRC39	Leucine rich repeat containing 39
+MYADML2	Myeloid-associated differentiation marker-like 2
+MYBPC1	Myosin binding protein C, slow type
+MYL1	Myosin, light chain 1, alkali; skeletal, fast
+SMCO1	Single-pass membrane protein with coiled-coil domains 1
+TNNI1	Troponin I type 1 (skeletal, slow)
+TRIM54	Tripartite motif containing 54
+CDH15	Cadherin 15, type 1, M-cadherin (myotubule)
+CHRNA10	Cholinergic receptor, nicotinic, alpha 10 (neuronal)
+LMOD3	Leiomodin 3 (fetal)
+MYL2	Myosin, light chain 2, regulatory, cardiac, slow
+RAPSN	Receptor-associated protein of the synapse
+ASB4	Ankyrin repeat and SOCS box containing 4
+CHRND	Cholinergic receptor, nicotinic, delta (muscle)
+KLHL41	Kelch-like family member 41
+SYNPO2L	Synaptopodin 2-like
+SYPL2	Synaptophysin-like 2
+XIRP2	Xin actin-binding repeat containing 2
+CSRP3	Cysteine and glycine-rich protein 3 (cardiac LIM protein)
+DUSP27	Dual specificity phosphatase 27 (putative)
+HFE2	Hemochromatosis type 2 (juvenile)
+PRSS42	Protease, serine, 42
+TRDN	Triadin
+TRIM72	Tripartite motif containing 72
+AMPD1	Adenosine monophosphate deaminase 1
+APOBEC2	Apolipoprotein B mRNA editing enzyme, catalytic polypeptide-like 2
+ARPP21	CAMP-regulated phosphoprotein, 21kDa
+FHL3	Four and a half LIM domains 3
+LDB3	LIM domain binding 3
+MYOM1	Myomesin 1
+MYOM2	Myomesin 2
+PPP1R3A	Protein phosphatase 1, regulatory subunit 3A
+RBFOX1	RNA binding protein, fox-1 homolog (C. elegans) 1
+XIRP1	Xin actin-binding repeat containing 1
+ANKRD2	Ankyrin repeat domain 2 (stretch responsive muscle)
+ASB18	Ankyrin repeat and SOCS box containing 18
+CA3	Carbonic anhydrase III, muscle specific
+CACNG6	Calcium channel, voltage-dependent, gamma subunit 6
+HSPB3	Heat shock 27kDa protein 3
+LRRC30	Leucine rich repeat containing 30
+MYF6	Myogenic factor 6 (herculin)
+NRAP	Nebulin-related anchoring protein
+TCAP	Titin-cap
+TMEM233	Transmembrane protein 233
+TMEM38A	Transmembrane protein 38A
+VGLL2	Vestigial like 2 (Drosophila)
+ASB11	Ankyrin repeat and SOCS box containing 11
+ASB16	Ankyrin repeat and SOCS box containing 16
+CAMK2A	Calcium/calmodulin-dependent protein kinase II alpha
+KLHL34	Kelch-like family member 34
+KLHL40	Kelch-like family member 40
+MSS51	MSS51 mitochondrial translational activator
+MYOZ3	Myozenin 3
+TNNC1	Troponin C type 1 (slow)
+CALML6	Calmodulin-like 6
+PPAPDC3	Phosphatidic acid phosphatase type 2 domain containing 3
+TBX15	T-box 15
+ABRA	Actin-binding Rho activating protein
+ATP1B4	ATPase, Na+/K+ transporting, beta 4 polypeptide
+ENO3	Enolase 3 (beta, muscle)
+LSMEM1	Leucine-rich single-pass membrane protein 1
+MB	Myoglobin
+MUSTN1	Musculoskeletal, embryonic nuclear protein 1
+MYL3	Myosin, light chain 3, alkali; ventricular, skeletal, slow
+PDE4DIP	Phosphodiesterase 4D interacting protein
+PGAM2	Phosphoglycerate mutase 2 (muscle)
+PHKG1	Phosphorylase kinase, gamma 1 (muscle)
+SLC25A4	Solute carrier family 25 (mitochondrial carrier; adenine nucleotide translocator), member 4
+SLN	Sarcolipin
+TMEM182	Transmembrane protein 182
+TNNT1	Troponin T type 1 (skeletal, slow)
+ASB10	Ankyrin repeat and SOCS box containing 10
+FABP3	Fatty acid binding protein 3, muscle and heart (mammary-derived growth inhibitor)
+FBP2	Fructose-1,6-bisphosphatase 2
+LSMEM2	Leucine-rich single-pass membrane protein 2
+PLCD4	Phospholipase C, delta 4
+RTN2	Reticulon 2
+SCN4A	Sodium channel, voltage-gated, type IV, alpha subunit
+ALPK3	Alpha-kinase 3
+BIN1	Bridging integrator 1
+CAV3	Caveolin 3
+COX7A1	Cytochrome c oxidase subunit VIIa polypeptide 1 (muscle)
+HHATL	Hedgehog acyltransferase-like
+LRRC2	Leucine rich repeat containing 2
+MAPK12	Mitogen-activated protein kinase 12
+MLF1	Myeloid leukemia factor 1
+MURC	Muscle-related coiled-coil protein
+MYOD1	Myogenic differentiation 1
+MYOG	Myogenin (myogenic factor 4)
+MYOM3	Myomesin 3
+NKAIN1	Na+/K+ transporting ATPase interacting 1
+PITX3	Paired-like homeodomain 3
+RGS9BP	Regulator of G protein signaling 9 binding protein
+RXRG	Retinoid X receptor, gamma
+SH3BGR	SH3 domain binding glutamic acid-rich protein
+SIX1	SIX homeobox 1
+SRPK3	SRSF protein kinase 3
+TXLNB	Taxilin beta
+C1orf167	Chromosome 1 open reading frame 167
+CAND2	Cullin-associated and neddylation-dissociated 2 (putative)
+CKM	Creatine kinase, muscle
+KBTBD12	Kelch repeat and BTB (POZ) domain containing 12
+LMO1	LIM domain only 1 (rhombotin 1)
+MAFA	V-maf avian musculoaponeurotic fibrosarcoma oncogene homolog A
+MYBPH	Myosin binding protein H
+MYH7B	Myosin, heavy chain 7B, cardiac muscle, beta
+NT5C1A	5'-nucleotidase, cytosolic IA
+POPDC3	Popeye domain containing 3
+RP11-155D18.14	Poly(rC)-binding protein 4 
+RP5-966M1.6	Musculoskeletal embryonic nuclear protein 1 
+SPTB	Spectrin, beta, erythrocytic
+TAL2	T-cell acute lymphocytic leukemia 2
+TMEM52	Transmembrane protein 52
+TPM2	Tropomyosin 2 (beta)
+UPK3A	Uroplakin 3A
+ACHE	Acetylcholinesterase (Yt blood group)
+ACTA1	Actin, alpha 1, skeletal muscle
+ASB15	Ankyrin repeat and SOCS box containing 15
+C20orf26	Chromosome 20 open reading frame 26
+CACNB1	Calcium channel, voltage-dependent, beta 1 subunit
+CAMK2B	Calcium/calmodulin-dependent protein kinase II beta
+CARNS1	Carnosine synthase 1
+COQ10A	Coenzyme Q10 homolog A (S. cerevisiae)
+DCUN1D2	DCN1, defective in cullin neddylation 1, domain containing 2
+DDIT4L	DNA-damage-inducible transcript 4-like
+DDN	Dendrin
+DUSP13	Dual specificity phosphatase 13
+HRASLS	HRAS-like suppressor
+IGFN1	Immunoglobulin-like and fibronectin type III domain containing 1
+KCNJ11	Potassium inwardly-rectifying channel, subfamily J, member 11
+KCNJ12	Potassium inwardly-rectifying channel, subfamily J, member 12
+KLHL31	Kelch-like family member 31
+LRRC3B	Leucine rich repeat containing 3B
+MLIP	Muscular LMNA-interacting protein
+MN1	Meningioma (disrupted in balanced translocation) 1
+MYLK4	Myosin light chain kinase family, member 4
+MYO18A	Myosin XVIIIA
+NOS1	Nitric oxide synthase 1 (neuronal)
+OBSCN	Obscurin, cytoskeletal calmodulin and titin-interacting RhoGEF
+PRSS56	Protease, serine, 56
+PTP4A3	Protein tyrosine phosphatase type IVA, member 3
+PVALB	Parvalbumin
+S100A1	S100 calcium binding protein A1
+SEMA6C	Sema domain, transmembrane domain (TM), and cytoplasmic domain, (semaphorin) 6C
+SGCA	Sarcoglycan, alpha (50kDa dystrophin-associated glycoprotein)
+SGCG	Sarcoglycan, gamma (35kDa dystrophin-associated glycoprotein)
+SLC29A2	Solute carrier family 29 (equilibrative nucleoside transporter), member 2
+SLC8A3	Solute carrier family 8 (sodium/calcium exchanger), member 3
+SMYD1	SET and MYND domain containing 1
+TUBA8	Tubulin, alpha 8
+AC011239.1	Uncharacterized protein 
+ADCK3	AarF domain containing kinase 3
+ADSSL1	Adenylosuccinate synthase like 1
+AGL	Amylo-alpha-1, 6-glucosidase, 4-alpha-glucanotransferase
+ARX	Aristaless related homeobox
+ASB14	Ankyrin repeat and SOCS box containing 14
+C1orf127	Chromosome 1 open reading frame 127
+CORO6	Coronin 6
+DENND2C	DENN/MADD domain containing 2C
+GAMT	Guanidinoacetate N-methyltransferase
+GHR	Growth hormone receptor
+IL17D	Interleukin 17D
+ITGB1BP2	Integrin beta 1 binding protein (melusin) 2
+KBTBD13	Kelch repeat and BTB (POZ) domain containing 13
+LRRC20	Leucine rich repeat containing 20
+MAP6D1	MAP6 domain containing 1
+MYLK3	Myosin light chain kinase 3
+PFKM	Phosphofructokinase, muscle
+PROB1	Proline-rich basic protein 1
+SBK1	SH3 domain binding kinase 1
+SMTNL2	Smoothelin-like 2
+ST8SIA5	ST8 alpha-N-acetyl-neuraminide alpha-2,8-sialyltransferase 5
+TPM3	Tropomyosin 3
+USP6	Ubiquitin specific peptidase 6 (Tre-2 oncogene)
+ZNF106	Zinc finger protein 106
+ABLIM2	Actin binding LIM protein family, member 2
+AC007421.1	
+AC037459.4	Uncharacterized protein 
+AC104534.3	Delta(3,5)-Delta(2,4)-dienoyl-CoA isomerase, mitochondrial 
+AC117395.1	LOC646903 protein; Uncharacterized protein 
+ADCY2	Adenylate cyclase 2 (brain)
+AGBL1	ATP/GTP binding protein-like 1
+AL354898.1	
+ALPK2	Alpha-kinase 2
+ANK1	Ankyrin 1, erythrocytic
+ANKRD9	Ankyrin repeat domain 9
+ANO5	Anoctamin 5
+ASB2	Ankyrin repeat and SOCS box containing 2
+ASB5	Ankyrin repeat and SOCS box containing 5
+ATP1A2	ATPase, Na+/K+ transporting, alpha 2 polypeptide
+ATP2B2	ATPase, Ca++ transporting, plasma membrane 2
+BEST3	Bestrophin 3
+C11orf89	Chromosome 11 open reading frame 89
+C15orf27	Chromosome 15 open reading frame 27
+C1orf170	Chromosome 1 open reading frame 170
+C1QTNF9	C1q and tumor necrosis factor related protein 9
+CA14	Carbonic anhydrase XIV
+CAP2	CAP, adenylate cyclase-associated protein, 2 (yeast)
+CCDC28B	Coiled-coil domain containing 28B
+CDNF	Cerebral dopamine neurotrophic factor
+CECR2	Cat eye syndrome chromosome region, candidate 2
+CHRNA1	Cholinergic receptor, nicotinic, alpha 1 (muscle)
+CLIC5	Chloride intracellular channel 5
+CLTCL1	Clathrin, heavy chain-like 1
+CNKSR1	Connector enhancer of kinase suppressor of Ras 1
+CRYAB	Crystallin, alpha B
+CTD-2207O23.12	Uncharacterized protein 
+CTD-2210P24.4	Uncharacterized protein 
+DOK5	Docking protein 5
+DOK7	Docking protein 7
+DUSP26	Dual specificity phosphatase 26 (putative)
+EEF1A2	Eukaryotic translation elongation factor 1 alpha 2
+EN1	Engrailed homeobox 1
+EXTL1	Exostosin-like glycosyltransferase 1
+EYA4	Eyes absent homolog 4 (Drosophila)
+FAM184B	Family with sequence similarity 184, member B
+FAM47E-STBD1	FAM47E-STBD1 readthrough
+FLNC	Filamin C, gamma
+FNDC5	Fibronectin type III domain containing 5
+FZD9	Frizzled family receptor 9
+GATS	GATS, stromal antigen 3 opposite strand
+GATSL1	GATS protein-like 1
+GATSL2	GATS protein-like 2
+GPD1	Glycerol-3-phosphate dehydrogenase 1 (soluble)
+GPR157	G protein-coupled receptor 157
+HOXC10	Homeobox C10
+HOXC9	Homeobox C9
+HS3ST5	Heparan sulfate (glucosamine) 3-O-sulfotransferase 5
+HSPB2	Homo sapiens heat shock 27kDa protein 2 (HSPB2), mRNA.
+HSPB2-C11orf52	HSPB2-C11orf52 readthrough (NMD candidate)
+HSPB6	Heat shock protein, alpha-crystallin-related, B6
+HSPB7	Heat shock 27kDa protein family, member 7 (cardiovascular)
+IP6K3	Inositol hexakisphosphate kinase 3
+ITGB6	Integrin, beta 6
+JPH2	Junctophilin 2
+KCNQ5	Potassium voltage-gated channel, KQT-like subfamily, member 5
+KCNS3	Potassium voltage-gated channel, delayed-rectifier, subfamily S, member 3
+KCNT1	Potassium channel, subfamily T, member 1
+KLHL30	Kelch-like family member 30
+KY	Kyphoscoliosis peptidase
+LINC00346	Long intergenic non-protein coding RNA 346
+LINGO4	Leucine rich repeat and Ig domain containing 4
+LMCD1	LIM and cysteine-rich domains 1
+MAMSTR	MEF2 activating motif and SAP domain containing transcriptional regulator
+MSTN	Myostatin
+MTRNR2L12	MT-RNR2-like 12 (pseudogene)
+MTRNR2L8	MT-RNR2-like 8
+MTRNR2L9	MT-RNR2-like 9 (pseudogene)
+MYF5	Myogenic factor 5
+MYH13	Myosin, heavy chain 13, skeletal muscle
+MYH8	Myosin, heavy chain 8, skeletal muscle, perinatal
+NANOS1	Nanos homolog 1 (Drosophila)
+NEURL1	Neuralized E3 ubiquitin protein ligase 1
+NEXN	Nexilin (F actin binding protein)
+P2RX6	Purinergic receptor P2X, ligand-gated ion channel, 6
+P2RY2	Purinergic receptor P2Y, G-protein coupled, 2
+PACSIN3	Protein kinase C and casein kinase substrate in neurons 3
+PADI2	Peptidyl arginine deiminase, type II
+PAX3	Paired box 3
+PAX7	Paired box 7
+PDLIM3	PDZ and LIM domain 3
+PEBP4	Phosphatidylethanolamine-binding protein 4
+PGPEP1L	Pyroglutamyl-peptidase I-like
+PHKA1	Phosphorylase kinase, alpha 1 (muscle)
+PIGY	Phosphatidylinositol glycan anchor biosynthesis, class Y
+PITX2	Paired-like homeodomain 2
+PKIA	Protein kinase (cAMP-dependent, catalytic) inhibitor alpha
+PLEKHF1	Pleckstrin homology domain containing, family F (with FYVE domain) member 1
+PPM1J	Protein phosphatase, Mg2+/Mn2+ dependent, 1J
+PPP1R1A	Protein phosphatase 1, regulatory (inhibitor) subunit 1A
+PPP1R3C	Protein phosphatase 1, regulatory subunit 3C
+PPP2R3A	Protein phosphatase 2, regulatory subunit B'', alpha
+PRKCQ	Protein kinase C, theta
+PRPH2	Peripherin 2 (retinal degeneration, slow)
+PRSS45	Protease, serine, 45
+PTGES3L	Prostaglandin E synthase 3 (cytosolic)-like
+RASA4B	RAS p21 protein activator 4B
+RASL10B	RAS-like, family 10, member B
+RBM24	RNA binding motif protein 24
+RP11-131H24.4	Uncharacterized protein 
+RP11-178C3.1	Uncharacterized protein 
+RP11-178L8.4	
+RP11-279O9.4	Uncharacterized protein 
+RP11-426L16.10	Rho-related GTP-binding protein RhoC 
+RP11-599B13.6	Uncharacterized protein 
+RP11-618P17.4	Uncharacterized protein 
+RYR3	Ryanodine receptor 3
+SCXA	Scleraxis homolog A (mouse)
+SCXB	Scleraxis homolog B (mouse)
+SH2B2	SH2B adaptor protein 2
+SIX2	SIX homeobox 2
+SIX4	SIX homeobox 4
+SLC2A4	Solute carrier family 2 (facilitated glucose transporter), member 4
+SLCO5A1	Solute carrier organic anion transporter family, member 5A1
+SNAI3	Snail family zinc finger 3
+SPEG	SPEG complex locus
+STRIP2	Striatin interacting protein 2
+SYNM	Synemin, intermediate filament protein
+SYNPO	Synaptopodin
+SYNPO2	Synaptopodin 2
+TBX1	T-box 1
+TCEA3	Transcription elongation factor A (SII), 3
+TCF15	Transcription factor 15 (basic helix-loop-helix)
+TEAD4	TEA domain family member 4
+TMEM110-MUSTN1	TMEM110-MUSTN1 readthrough
+TMX2-CTNND1	TMX2-CTNND1 readthrough (NMD candidate)
+TRIM7	Tripartite motif containing 7
+TTC40	Tetratricopeptide repeat domain 40
+UQCR11	
+USP2	Ubiquitin specific peptidase 2

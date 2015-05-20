@@ -1,0 +1,48 @@
+
+
+scp dgelsin1@hhpc.idies.jhu.edu:/home/dgelsin1/RNA-seq_analysis/chimp_tophat/SRX329413/SRX329413_top_out/accepted_hit_sorted.bam.bam .
+#download files (tophat output sorted bam) from cluster to local
+
+scp dgelsin1@hhpc.idies.jhu.edu:/home/dgelsin1/RNA-seq_analysis/chimp_tophat/SRX329413/SRX329413_cuffout/transcripts.gtf .
+#download files (cufflinks transcript output)
+
+samtools view cP2_accepted_hit_sorted.bam.bam > cP2_accepted_hit_sorted.sam
+#convert bam file to sam file for HTseq
+
+samtools view -bf 1 foo.bam > foo.paired-end.bam
+samtools view -bF 1 foo.bam > foo.single-end.bam
+#if you get this error with HTSeq: "Error occured when processing SAM input (line 6 of file cP2_accepted_hit_sorted.sam):'pair_alignments' needs a sequence of paired-end alignments" it means that you have both single-end and paired-end lines in your bam file somehow. You have to separate them with the above commands. Feed in paired-end.bam to HTseq
+
+samtools view foo.paire-end.bam > foo.paired-end.sam
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+*#*#*#*#*#*##*SUMMMARY#*#*#*#*#*#*#*##*
+samtools sort -n accepted_hits.bam accepted_hits.nsorted ## Sort by read name (necessary for htseq-count)
+samtools view -bf 1 accepted_hits.nsorted.bam > paired-end.nsorted.bam
+samtools view paired-end.nsorted.bam > paired-end.sam
+python -m HTSeq.scripts.count paired-end.sam myfile.gtf
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+python -m HTSeq.scripts.count cP3_accepted_hit_sorted.sam cP3_transcripts.gtf > cP3_readcounts_out
+#get reads counts from sam sorted tophat output
+
+Go to ENSEMBL BIOMART -> http://useast.ensembl.org/biomart/martview/247e0d1f65e401a0910386d3dad253be -> choose Ensembl Genes 79 --> choose Pan trogolodytes genes -> Filters: Gene ::: Paste in ENSEMBL IDs -> Attributes: Gene ::: Ensembl Gene ID & Associated Gene Name for gene names ::::OR:::: Chromosome Name & Gene Start & Gene End for genomic coordinates for liftover.
+
+Replace Ensembl IDs with gene names
+#Use the python script I wrote called replace gene names: 
+/Users/cmdb/Desktop/Rotation_4_-_Taylor_Lab/Data/Programs/remove_duplicates.py File1 (readcounts) File2(gene_names_list.txt) 
+
+
+awk 'FNR==NR{a[$1];next};($1 in a)' humanP3_readcounts_output_noNAN chimpP3_readcounts_output_noNAN > chimpP3_readcounts_matched
+
+
+Use genomic coordinates output with awk command below:
+awk '{ $0 = "chr" $0}1' < cP3.txt > cP3_UCSC.txt
+tail -n +2 cP3_UCSC.txt > cP3_UCSC_3.txt
+#convert ensembl genomic coordinates into ucsc coordinates (basically add chr to chromosome name)
+
+Pipe in genomic coordinates to Galaxy Liftover: https://usegalaxy.org/ -> Lift-Over -> Convert genome coordinates -> to hg19 -> Minimum ratio: .10
+
+Get output of genomic coordinates from chimp to human and pipe into UCSC genome browser table browser: https://genome.ucsc.edu/cgi-bin/hgTables -> track: Ensembl Genes --> table: ensemblToGeneName --> output format: allfields from selected table --> get ouput
+#this gives the liftover gene names of chimp to human in ensembl wooot
+

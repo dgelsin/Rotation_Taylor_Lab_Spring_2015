@@ -1,0 +1,52 @@
+==================================================================
+  Processing data set MYL3_GENE_cis_elements_distal
+==================================================================
+1.  filtering elements, time 0h0m0s
+    sites in original bed file: 2700
+               autosomal sites: 2700
+               after filtering: 2125
+2.  generating polymorphism summary for all sites, time 0h0m8s
+3.  retrieving ancestral priors for all sites, time 0h0m8s
+Fri May  8 17:04:48 EDT 2015
+Fri May  8 17:04:48 EDT 2015
+    prior probabilities for 'A'... .
+Fri May  8 17:04:48 EDT 2015
+    prior probabilities for 'C'... .
+Fri May  8 17:04:49 EDT 2015
+    prior probabilities for 'G'... .
+Fri May  8 17:04:49 EDT 2015
+    prior probabilities for 'T'... .
+Fri May  8 17:04:49 EDT 2015
+Fri May  8 17:04:49 EDT 2015
+4.  combining polymorphism summary with ancestral priors, time 0h0m9s
+5.  filtering sites with no variation or ancestral data, time 0h0m9s
+    total number of sites:    2125
+    sites with sequence data: 1691
+6.  retrieving lambdas and thetas from appropriate genomic blocks, time 0h0m9s
+    found 14 total blocks with lambda values.
+    found 14 blocks with at least 100 sites with information on lamda.
+    found 14 total blocks with theta values.
+    found 14 blocks with at least 100 sites with information on theta.
+    obtaining intersection bed file
+    filtering sites that do not appear in blocks with sufficient information
+    number of sites decreased from 1691 to 1691
+    combining block information for theta and lambda with site information
+7.  computing set of filtered neutral sites in blocks, time 0h0m11s
+8.  flanking sites: retrieving polymorphic sites, time 0h0m15s
+9. flanking sites: retrieving ancestral priors, time 0h0m15s
+Fri May  8 17:04:55 EDT 2015
+Fri May  8 17:04:55 EDT 2015
+    prior probabilities for 'A'... .
+Fri May  8 17:04:55 EDT 2015
+    prior probabilities for 'C'... .
+Fri May  8 17:04:55 EDT 2015
+    prior probabilities for 'G'... .
+Fri May  8 17:04:55 EDT 2015
+    prior probabilities for 'T'... .
+Fri May  8 17:04:55 EDT 2015
+Fri May  8 17:04:55 EDT 2015
+10. flanking sites: combining ancestral priors and observed alleles, time 0h0m15s
+11. flanking sites: combining site and block info, time 0h0m15s
+12. tarring intermediate site summaries, time 0h0m15s
+tar: Removing leading `/' from member names
+Done with 1691 sites after filtering, and 94 polymorphic flanking neutral sites. time 0h0m16s
