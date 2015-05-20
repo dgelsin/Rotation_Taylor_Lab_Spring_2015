@@ -1,0 +1,29 @@
+Directory containing source code for INSIGHT-EM
+-----------------------------------------------
+
+List of files:
+--------------
+   1. src/INSIGHT-EM.c
+   2. src/Utils.h 
+   3. src/Utils.c
+   4. src/SumLogs.h
+   5. src/SumLogs.c
+   6. src/NumericOpt.h
+   7. src/NumericOpt.c
+   8. src/bfgs.h
+   9. src/bfgs.c
+
+Description: (more details in the header of each source file)
+------------
+
+   src/INSIGHT-EM.c                    -  main source file with implementation of EM 
+
+   src/Utils.h ; src/Utils.c           -  module with various general utility functions
+   
+   src/SumLogs.h ; src/SumLogs.c       -  module for processing and maximizing "sum-of-logs" functions (main component in expected ln-likelihood)
+
+   src/NumericOpt.h ; src/NumericOpt.c -  module with various numerical optimization procedures
+   
+   src/bfgs.h ; src/bfgs.c             -  module with BFGS algorithm implementation taken from HMMld
+                                          (translated from fortran and not used in current implementation !!) 
+

@@ -1,0 +1,21 @@
+----------------------------------------------------------------------------------------------
+       INSIGHT-EM v1.1, February 2013 
+----------------------------------------------------------------------------------------------
+==> Processing site data file 'samples/thresholdedInput/miRNAs.flankPoly.forBetas.f15.ins.f15' and extracting neutral model parameters
+==> Data file consists of 5247 sites in 857 genomic blocks.
+==> Performing EM on selection parameters
+    - EM stops after 100000 iterations or when log-likelihood increase is below 1e-06
+    - '.' = 100 iterations
+    - fixing the following parameters: eta = 0.000000.
+    - estimating the following parameters: rho (init = 0.600000) gamma (init = 0.500000).
+    - using complete version of the model integrating over assignments to the ancestral states Zi.
+----------------------------------------------------------------------------------------------
+Progress: 
+Done. Running time  0m01s.
+----------------------------------------------------------------------------------------------
+             rho      eta    gamma       Dp       Pw    alpha      tau
+Estimates: 0.379152 0.000000 -0.500000 0.000000 -1.050347 0.000000 -0.439574
+----------------------------------------------------------------------------------------------
+             iter     lnLd       diff       status
+EM status:       2   -41448.4 -2483.26  overshoot
+----------------------------------------------------------------------------------------------

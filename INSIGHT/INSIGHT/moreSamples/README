@@ -1,0 +1,17 @@
+Directory containing additional sample files for INSIGHT-EM
+---------------------------------------------------------
+
+   Sample files correspond to various sets of non-coding elements analyzed in Gronau
+   et al., 2013. All files correspond to raw polymorphism data before applying the
+   frequency cutoff (all polymorphic sites are labeled by 'P'). For each set, 
+   one input file describes human polymorphisms and distributions over ancestral
+   states for the miRNA sites that pass filtering (labeled *.ins), and another file
+   describes human polymorphisms and distributions over ancestral states for the
+   neutral flanking polymorphic sites (labeled *.flankPoly.forBetas.ins)
+
+List of datasets:
+-----------------
+1. GATA2-TFBS  GATA2 transcription factor binding sites
+2. lincRNAs    long intergenic non-coding RNAs
+3. miRNAs      microRNAs
+4. snoRNAs     small nucleolar RNAs
