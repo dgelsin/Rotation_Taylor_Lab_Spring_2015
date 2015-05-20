@@ -1,0 +1,5 @@
+paste -d '\t' human_muscle_RNA-seq.txt chimp_muscle_RNA-seq.txt Rh_monk_muscle_RNA-seq.txt Mouse_muscle_RNA-seq.txt > muscle_all.txt 
+#merge columns from various files into one file!
+
+awk '{ofs = '\t'}'{print $1:$24}'
+#add a delimiter to a file

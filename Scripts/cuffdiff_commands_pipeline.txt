@@ -1,0 +1,14 @@
+hum_tophat/SRX329370_top_out/SRX329370_cuffout/transcripts.gtf
+hum_tophat/SRX329371_top_out/SRX329371_cuffout/transcripts.gtf
+hum_tophat/SRX329372_top_out/SRX329372_cuffout/transcripts.gtf
+hum_tophat/SRX329382_top_out/SRX329382_cuffout/transcripts.gtf
+hum_tophat/SRX329383_top_out/SRX329383_cuffout/transcripts.gtf
+hum_tophat/SRX329384_top_out/SRX329384_cuffout/transcripts.gtf
+chimp_tophat/SRX329400/SRX329400_cuffout/transcripts.gtf 
+chimp_tophat/SRX329401/SRX329401_cuffout/transcripts.gtf 
+chimp_tophat/SRX329402/SRX329402_cuffout/transcripts.gtf 
+chimp_tophat/SRX329412/SRX329412_cuffout/transcripts.gtf 
+chimp_tophat/SRX329413/SRX329413_cuffout/transcripts.gtf 
+chimp_tophat/SRX329414/SRX329414_cuffout/transcripts.gtf 
+
+cuffdiff -o diff_out -b /home/dgelsin1/RNA-seq_analysis/Homo_sapiens/Ensembl/GRCh37/Sequence/Bowtie2Index/genome.fa -p 12 -L hM1,hM2,hM3,hP1,hP2,hP3,cM1,cM2,cM3,cP1,cP2,cP3 -u /home/dgelsin1/RNA-seq_analysis/hum-chimp_merged_asm/merged.gtf /home/dgelsin1/RNA-seq_analysis/hum_tophat/SRX329370_top_out/accepted_hits.bam /home/dgelsin1/RNA-seq_analysis/hum_tophat/SRX329371_top_out/accepted_hits.bam /home/dgelsin1/RNA-seq_analysis/hum_tophat/SRX329372_top_out/accepted_hits.bam /home/dgelsin1/RNA-seq_analysis/hum_tophat/SRX329382_top_out/accepted_hits.bam /home/dgelsin1/RNA-seq_analysis/hum_tophat/SRX329383_top_out/accepted_hits.bam /home/dgelsin1/RNA-seq_analysis/hum_tophat/SRX329384_top_out/accepted_hits.bam /home/dgelsin1/RNA-seq_analysis/chimp_tophat/SRX329400/SRX329400_top_out/accepted_hits.bam /home/dgelsin1/RNA-seq_analysis/chimp_tophat/SRX329401/SRX329401_top_out/accepted_hits.bam /home/dgelsin1/RNA-seq_analysis/chimp_tophat/SRX329402/SRX329402_top_out/accepted_hits.bam /home/dgelsin1/RNA-seq_analysis/chimp_tophat/SRX329412/SRX329412_top_out/accepted_hits.bam /home/dgelsin1/RNA-seq_analysis/chimp_tophat/SRX329413/SRX329413_top_out/accepted_hits.bam /home/dgelsin1/RNA-seq_analysis/chimp_tophat/SRX329414/SRX329414_top_out/accepted_hits.bam
